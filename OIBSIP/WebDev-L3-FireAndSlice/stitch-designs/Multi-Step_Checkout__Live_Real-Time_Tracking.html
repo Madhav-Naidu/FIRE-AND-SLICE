@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=ebGaramond:wght@100..900&family=spaceGrotesk:wght@100..900&family=spaceMono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#cdc6b5","outline-variant":"#59413a","on-error-container":"#ffdad6","ember-glow":"#FF6B35","on-primary-container":"#521300","on-surface-variant":"#e1bfb5","surface-container-high":"#2d2926","primary-container":"#f46230","surface":"#161310","on-background":"#eae1dc","surface-charcoal":"#12100E","on-tertiary":"#343024","secondary-container":"#8d1d20","surface-container-low":"#1f1b18","surface-container-lowest":"#110e0b","on-secondary-container":"#ff9e98","primary-fixed-dim":"#ffb59e","on-tertiary-fixed-variant":"#4b473a","surface-border":"#2E2620","on-primary-fixed":"#3a0b00","inverse-surface":"#eae1dc","on-primary-fixed-variant":"#842500","tertiary-fixed":"#eae2d0","surface-bright":"#3d3835","surface-dim":"#161310","primary-fixed":"#ffdbd0","crust-cream":"#FAF7F2","on-primary":"#5e1700","surface-container":"#231f1c","error":"#ffb4ab","surface-variant":"#383431","background":"#161310","primary":"#ffb59e","on-tertiary-container":"#2d2a1e","error-container":"#93000a","on-tertiary-fixed":"#1f1b11","on-secondary-fixed-variant":"#8a1b1e","surface-elevated":"#1C1713","surface-tint":"#ffb59e","on-surface":"#eae1dc","on-secondary-fixed":"#410004","on-error":"#690005","secondary-fixed":"#ffdad7","tertiary-fixed-dim":"#cdc6b5","inverse-on-surface":"#34302d","secondary-fixed-dim":"#ffb3ae","on-secondary":"#68000c","outline":"#a98a81","inverse-primary":"#ad3300","secondary":"#ffb3ae","tertiary-container":"#969081","ash-muted":"#8A8178","surface-container-highest":"#383431"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-desktop":"2rem","grid-margin-mobile":"1.25rem","space-md":"1rem","space-2xs":"0.25rem","space-sm":"0.75rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","grid-margin-desktop":"4rem","space-xs":"0.5rem","space-2xl":"4rem","space-3xl":"6rem"},"fontFamily":{"label-sm":["spaceMono"],"headline-lg":["ebGaramond"],"display-hero-mobile":["ebGaramond"],"display-hero":["ebGaramond"],"label-technical":["spaceMono"],"body-md":["spaceGrotesk"],"headline-sm":["ebGaramond"],"body-lg":["spaceGrotesk"],"body-sm":["spaceGrotesk"],"title-md":["spaceGrotesk"],"headline-md":["ebGaramond"],"headline-lg-mobile":["ebGaramond"]},"fontSize":{"label-sm":["0.6875rem",{"lineHeight":"1.2","letterSpacing":"0.08em","fontWeight":"400"}],"headline-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.01em","fontWeight":"500"}],"display-hero-mobile":["3.25rem",{"lineHeight":"1.1","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero":["5rem",{"lineHeight":"1.05","letterSpacing":"-0.02em","fontWeight":"400"}],"label-technical":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.12em","fontWeight":"700"}],"body-md":["0.9375rem",{"lineHeight":"1.5","fontWeight":"400"}],"headline-sm":["1.75rem",{"lineHeight":"1.3","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.45","fontWeight":"400"}],"title-md":["1.25rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["2.25rem",{"lineHeight":"1.25","fontWeight":"500"}],"headline-lg-mobile":["2.25rem",{"lineHeight":"1.2","letterSpacing":"0","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-charcoal/90 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-grid-margin-mobile lg:px-grid-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="FIRE & SLICE Brand Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ9IwS-nK5f2m2ylvVjSAYglrE2tmQ6JmHmlza0vhgtaAmfXmCWQH6nNLpnR7bHYn5X7My5lTG7xCt_CuMJyOBvLvOnDHL-wZtjdym1qcGPYJEJ2zLJv-JUc69UAykin9Rc9nng__gPxf_X1VXA7WrdYZgIGm624ITlzyAd10DMi-i_VvSP31bsvKGedOoWe6VHpENQvdXlG7PXy07N-KMuZYx1bIrOEPsKYf-y0ibEeCmj1-yPo218g"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-crust-cream tracking-tight group-hover:text-primary-container transition-colors">FIRE & SLICE</span><span class="font-label-sm text-label-sm uppercase text-ash-muted tracking-widest hidden sm:inline-block">450°C Wood-Fired Craft</span></div></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="#">Menu</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="build-your-pizza" href="#">Build Your Pizza</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="offers" href="#">Offers</a><a aria-current="page" class="px-space-sm py-space-xs tracking-wide transition-colors bg-surface-container-high text-primary font-bold rounded-lg" data-path="track-order" href="#">Track Order</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a></nav></div><div class="flex items-center gap-space-sm lg:gap-space-md"><button class="hidden md:flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-low text-ash-muted hover:text-crust-cream hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-ember-glow">local_fire_department</span><span class="font-label-technical text-label-technical tracking-wider text-crust-cream">Downtown Flagship</span><span class="font-label-sm text-label-sm text-ash-muted">· 25-35m</span></button><button aria-label="Search" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-crust-cream hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Cart" class="relative flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-elevated hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px] text-primary-container">shopping_bag</span><span class="font-label-technical text-label-technical text-crust-cream hidden sm:inline-block">$48.50</span><span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-technical text-label-sm flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-space-xs pl-space-2xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- View Toggle & Breadcrumb Navigator Bar -->
+<section class="w-full bg-surface-container-lowest py-space-sm px-grid-margin-mobile lg:px-grid-margin-desktop">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-technical text-label-technical text-ash-muted uppercase tracking-widest">KILN TERMINAL</span>
+<span class="text-surface-border">/</span>
+<span class="font-label-technical text-label-technical text-primary-container uppercase tracking-wider" id="activeBreadcrumbLabel">01. EXPRESS CHECKOUT</span>
+</div>
+<!-- Mode Switcher Tabs -->
+<div class="flex items-center p-1 rounded-lg bg-surface-charcoal">
+<button class="px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 bg-primary-container text-on-primary shadow-sm flex items-center gap-space-2xs" id="tabBtnCheckout" onclick="switchView('checkout')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+<span>Checkout Deck</span>
+</button>
+<button class="px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 text-ash-muted hover:text-crust-cream flex items-center gap-space-2xs" id="tabBtnTracking" onclick="switchView('tracking')" type="button">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span>Live Kiln Telemetry (#FS-10248)</span>
+<span class="w-2 h-2 rounded-full bg-ember-glow animate-ping ml-1"></span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs">
+<span class="font-label-technical text-label-technical text-ash-muted">256-BIT ENCRYPTION</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">lock</span>
+</div>
+</div>
+</section>
+<!-- VIEW 1: MULTI-STEP CHECKOUT -->
+<section class="w-full py-space-xl px-grid-margin-mobile lg:px-grid-margin-desktop transition-opacity duration-500" id="viewCheckout">
+<div class="max-w-[1440px] mx-auto">
+<!-- Stepper Pill Bar -->
+<div class="mb-space-xl grid grid-cols-2 md:grid-cols-4 gap-space-xs">
+<div class="bg-surface-elevated p-space-sm rounded-xl flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-label-technical text-label-technical flex items-center justify-center font-bold">01</span>
+<div class="min-w-0">
+<p class="font-label-technical text-label-sm text-crust-cream uppercase truncate">Delivery Hub</p>
+<p class="font-body-sm text-label-sm text-ember-glow truncate">Address & Pin</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-ash-muted font-label-technical text-label-technical flex items-center justify-center font-bold">02</span>
+<div class="min-w-0">
+<p class="font-label-technical text-label-sm text-on-surface-variant uppercase truncate">Heat Shield</p>
+<p class="font-body-sm text-label-sm text-ash-muted truncate">Delivery Velocity</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-ash-muted font-label-technical text-label-technical flex items-center justify-center font-bold">03</span>
+<div class="min-w-0">
+<p class="font-label-technical text-label-sm text-on-surface-variant uppercase truncate">Payment Vault</p>
+<p class="font-body-sm text-label-sm text-ash-muted truncate">UPI, Cards, Cash</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-xs">
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-ash-muted font-label-technical text-label-technical flex items-center justify-center font-bold">04</span>
+<div class="min-w-0">
+<p class="font-label-technical text-label-sm text-on-surface-variant uppercase truncate">Manifest</p>
+<p class="font-body-sm text-label-sm text-ash-muted truncate">Final Order Bill</p>
+</div>
+</div>
+</div>
+<!-- Main Split: 7-Column Steps Deck & 5-Column Live Cart Manifest -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Steps Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- STEP 01: Delivery Address -->
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-crust-cream">1. Drop Coordinates</h2>
+</div>
+<button class="flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-ember-glow font-label-technical text-label-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+<span>Use Current Location</span>
+</button>
+</div>
+<!-- Saved Tag Badges -->
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="font-label-sm text-label-sm text-ash-muted uppercase">Tag:</span>
+<button class="px-space-sm py-space-2xs rounded-full bg-primary-container text-on-primary font-title-md text-body-sm" type="button">Home</button>
+<button class="px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm" type="button">Studio</button>
+<button class="px-space-sm py-space-2xs rounded-full bg-surface-container text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm" type="button">Office</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">Full Name</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="Aarav Sengupta"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">Phone Contact</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="tel" value="+91 98450 81249"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">Flat / Villa / Hearth No.</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="Apt 402, Ember Heights"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">Street & Avenue</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="7th Cross, Indiranagar"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">City</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="Bengaluru"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted uppercase">Postal Code</label>
+<input class="w-full bg-surface-charcoal px-space-sm py-space-xs rounded-lg text-crust-cream font-body-md focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="560038"/>
+</div>
+</div>
+</div>
+<!-- STEP 02: Delivery Velocity Selection -->
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-xl">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-crust-cream">2. Dispatch Velocity</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Standard Delivery -->
+<label class="cursor-pointer group">
+<input class="hidden peer" name="velocity" type="radio" value="std"/>
+<div class="p-space-md rounded-xl bg-surface-charcoal peer-checked:bg-surface-container-high transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase">Method 01</span>
+<h3 class="font-title-md text-title-md text-crust-cream">Standard Hearth Drop</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct from wood-kiln in standard double-flute corrugated box.</p>
+</div>
+<span class="material-symbols-outlined text-ash-muted group-hover:text-primary transition-colors">schedule</span>
+</div>
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<span class="font-label-technical text-label-technical text-crust-cream">30 — 40 MIN</span>
+<span class="font-label-technical text-label-technical text-ember-glow uppercase font-bold">FREE</span>
+</div>
+</div>
+</label>
+<!-- Heat-Shield Thermal Delivery -->
+<label class="cursor-pointer group">
+<input checked="" class="hidden peer" name="velocity" type="radio" value="express"/>
+<div class="p-space-md rounded-xl bg-surface-charcoal peer-checked:bg-surface-container-high transition-all relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-primary-container/10 blur-xl"></div>
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-2xs">
+<span class="font-label-technical text-label-sm text-ember-glow uppercase">PRIORITY PROTOCOL</span>
+<span class="px-space-2xs py-0.5 rounded-sm bg-primary-container text-on-primary font-label-technical text-label-sm">FASTEST</span>
+</div>
+<h3 class="font-title-md text-title-md text-crust-cream">Heat-Shield Express</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">95°C thermal aerogel capsule courier. Zero steam condensation guarantee.</p>
+</div>
+<span class="material-symbols-outlined text-ember-glow">bolt</span>
+</div>
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<span class="font-label-technical text-label-technical text-crust-cream">20 — 25 MIN</span>
+<span class="font-label-technical text-label-technical text-crust-cream font-bold">₹0 <span class="line-through text-ash-muted font-normal text-label-sm">₹49</span></span>
+</div>
+</div>
+</label>
+</div>
+</div>
+<!-- STEP 03: Payment Vault -->
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-crust-cream">3. Payment Vault</h2>
+</div>
+<div class="flex items-center gap-space-2xs text-ash-muted font-label-technical text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>RAZORPAY SECURE</span>
+</div>
+</div>
+<!-- Payment Methods Grid Tabs -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs mb-space-md">
+<button class="pay-tab p-space-sm rounded-lg bg-surface-container-high text-ember-glow font-label-technical text-label-sm flex flex-col items-center gap-space-2xs" id="payTab-upi" onclick="setPaymentMethod('upi')" type="button">
+<span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+<span>UPI / QR</span>
+</button>
+<button class="pay-tab p-space-sm rounded-lg bg-surface-charcoal text-on-surface-variant font-label-technical text-label-sm flex flex-col items-center gap-space-2xs hover:bg-surface-container" id="payTab-card" onclick="setPaymentMethod('card')" type="button">
+<span class="material-symbols-outlined text-[24px]">credit_card</span>
+<span>Cards</span>
+</button>
+<button class="pay-tab p-space-sm rounded-lg bg-surface-charcoal text-on-surface-variant font-label-technical text-label-sm flex flex-col items-center gap-space-2xs hover:bg-surface-container" id="payTab-netbanking" onclick="setPaymentMethod('netbanking')" type="button">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+<span>Net Banking</span>
+</button>
+<button class="pay-tab p-space-sm rounded-lg bg-surface-charcoal text-on-surface-variant font-label-technical text-label-sm flex flex-col items-center gap-space-2xs hover:bg-surface-container" id="payTab-cod" onclick="setPaymentMethod('cod')" type="button">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+<span>Cash on Drop</span>
+</button>
+</div>
+<!-- Interactive UPI Box -->
+<div class="p-space-md rounded-xl bg-surface-charcoal flex flex-col md:flex-row items-center gap-space-lg" id="paymentContentUpi">
+<!-- QR Code Simulator Canvas -->
+<div class="w-36 h-36 bg-crust-cream p-2 rounded-lg flex flex-col items-center justify-between shadow-inner">
+<div class="w-full h-full flex items-center justify-center bg-surface-charcoal rounded">
+<svg class="w-28 h-28 text-crust-cream" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm13-2h3v3h-3v-3zm0 5h3v3h-3v-3zm-3-5h2v2h-2v-2zm0 4h2v4h-2v-4zm-4-4h2v2h-2v-2zm0 3h2v3h-2v-3z"></path>
+</svg>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-space-xs">
+<span class="font-label-technical text-label-sm text-ember-glow">INSTANT SCAN // ZERO SURCHARGE</span>
+<h4 class="font-title-md text-title-md text-crust-cream">Scan with GooglePay, PhonePe, or Paytm</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your order locks immediately upon payment beacon acknowledgment.</p>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<span class="px-space-xs py-1 rounded bg-surface-container text-tertiary font-label-sm text-label-sm">UPI ID: fireslice@icici</span>
+<button class="text-ember-glow hover:underline font-label-technical text-label-sm" type="button">Copy</button>
+</div>
+</div>
+</div>
+<!-- Alternative Card Input Box (Hidden by default) -->
+<div class="hidden p-space-md rounded-xl bg-surface-charcoal flex-col gap-space-sm" id="paymentContentCard">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted">CARD NUMBER</label>
+<input class="w-full bg-surface-container-high px-space-sm py-space-xs rounded text-crust-cream font-label-technical focus:outline-none" placeholder="4532 •••• •••• 8821" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted">VALID THRU</label>
+<input class="w-full bg-surface-container-high px-space-sm py-space-xs rounded text-crust-cream font-label-technical focus:outline-none" placeholder="08 / 28" type="text"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-technical text-label-sm text-ash-muted">CVV / CVC</label>
+<input class="w-full bg-surface-container-high px-space-sm py-space-xs rounded text-crust-cream font-label-technical focus:outline-none" maxlength="4" placeholder="•••" type="password"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 5-Column Live Cart Manifest & Place Order CTA -->
+<div class="lg:col-span-5 flex flex-col gap-space-md sticky top-24">
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-2xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-ember-glow">receipt_long</span>
+<h3 class="font-headline-sm text-headline-sm text-crust-cream">Oven Manifest</h3>
+</div>
+<span class="font-label-technical text-label-sm text-ash-muted">2 ITEMS</span>
+</div>
+<!-- Pizza Item 1 -->
+<div class="py-space-sm flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-charcoal overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Classic Neapolitan Margherita pizza with charred leopard spots on sourdough crust, fresh melted Fior di Latte mozzarella, San Marzano tomato sauce, and basil baked in 450 degree brick oven." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3GeiSvaS8Wx0oPbdFMkDuXB02xxTSauckIRo4FCbcTgErIB_2fHeg5BY1djJvuIGFnwq_8vDkufNXrb70eJ2Olrj6-P5LxihrZDjcWvjOey32aU6bmFvX3hszL7eBS4CGMdP4mIgqqPAr4o6ICTyO5kTiGGCAZroQg932ca3364ulqDGpcz_5OPie4su6T2rlnrnQTVACWMR8impBM9-AINsF3ygw8T0CyUW2b1dBZS6pLA_uFgBTlw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-space-xs">
+<h4 class="font-title-md text-title-md text-crust-cream truncate">Margherita D.O.P.</h4>
+<span class="font-label-technical text-label-technical text-crust-cream">₹449</span>
+</div>
+<p class="font-label-sm text-label-sm text-ash-muted">12" Sourdough · San Marzano · Fresh Basil</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="text-label-sm font-label-technical text-ember-glow">QTY: 1</span>
+<span class="text-ash-muted">·</span>
+<span class="text-label-sm font-label-technical text-tertiary">450°C KILN</span>
+</div>
+</div>
+</div>
+<!-- Pizza Item 2 -->
+<div class="py-space-sm flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-charcoal overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Diavola artisan pizza with spicy artisanal calabrian salami curls, charred blistered crust, hot honey drizzle, and fresh burrata pearls on dark granite stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjrzuY5fkVmNalw5hJMApOJI2E1mBE4kiHpyhXZtKzB6GvhPzMR1wjNevCP7OORoIpRKW0q4VGbgePAjJfTzcCEK3RqBQ53fgeXrxT73OPl3ae4RwtuF4HIqQ-GBp4AjfhE2ZY9m8Zdf1CuQHE0hjKfZ-z4jKFY_DmhiI6SVzTEpc061bkFSyddkP8O978MMMNjN_TVwG8lMN6cp9fgFXcDapbstg5Hakw9bcvHIhBK_HwruXZd3pH9w"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-space-xs">
+<h4 class="font-title-md text-title-md text-crust-cream truncate">Diavola Calabrese</h4>
+<span class="font-label-technical text-label-technical text-crust-cream">₹399</span>
+</div>
+<p class="font-label-sm text-label-sm text-ash-muted">12" Sourdough · Spianata Calabrese · Hot Honey</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="text-label-sm font-label-technical text-ember-glow">QTY: 1</span>
+<span class="text-ash-muted">·</span>
+<span class="text-label-sm font-label-technical text-tertiary">EXTRA CRISP</span>
+</div>
+</div>
+</div>
+<!-- Voucher Applied Pill -->
+<div class="my-space-sm p-space-sm rounded-lg bg-surface-charcoal flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-ember-glow text-[18px]">local_offer</span>
+<div>
+<p class="font-label-technical text-label-sm text-crust-cream">HEARTHFIRST (-₹60)</p>
+<p class="font-label-sm text-label-sm text-ash-muted">Woodfire inaugural discount unlocked</p>
+</div>
+</div>
+<button class="text-ash-muted hover:text-ember-glow font-label-technical text-label-sm" type="button">CHANGE</button>
+</div>
+<!-- Calculation Breakdown -->
+<div class="flex flex-col gap-space-xs pt-space-sm font-body-sm text-on-surface-variant">
+<div class="flex justify-between">
+<span>Subtotal (2 Hearth Pies)</span>
+<span class="font-label-technical text-crust-cream">₹848</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1">
+<span>Heat-Shield Delivery Velocity</span>
+<span class="font-label-sm text-label-sm text-ember-glow">(FREE threshold)</span>
+</div>
+<span class="font-label-technical text-ember-glow uppercase">₹0</span>
+</div>
+<div class="flex justify-between">
+<span>Kitchen Service & GST (5%)</span>
+<span class="font-label-technical text-crust-cream">₹42.40</span>
+</div>
+<div class="flex justify-between text-ember-glow">
+<span>Hearth Coupon Code</span>
+<span class="font-label-technical">-₹60.00</span>
+</div>
+<div class="flex justify-between">
+<span>Packaging (Zero Plastic Bag)</span>
+<span class="font-label-technical text-crust-cream">₹0</span>
+</div>
+<div class="flex justify-between pt-space-sm mt-space-xs text-crust-cream font-title-md">
+<span class="text-body-lg">Total Due</span>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-crust-cream">₹788.40</span>
+<p class="font-label-sm text-label-sm text-ash-muted">Inclusive of all local food taxes</p>
+</div>
+</div>
+</div>
+<!-- Big Place Order Trigger Button -->
+<button class="mt-space-lg w-full py-space-md rounded-lg bg-primary-container text-on-primary font-title-md text-title-md uppercase tracking-wider hover:bg-ember-glow transition-all duration-300 shadow-xl flex items-center justify-center gap-space-sm group" onclick="placeOrderAndTrack()" type="button">
+<span>FIRE THE ORDER → ₹788</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">local_fire_department</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-ash-muted mt-space-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock</span>
+              90-second flash bake guarantee or next pie on us.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VIEW 2: REAL-TIME LIVE TRACKING & OVEN TELEMETRY -->
+<section class="hidden w-full py-space-xl px-grid-margin-mobile lg:px-grid-margin-desktop transition-opacity duration-500" id="viewTracking">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<!-- Telemetry Live Header Banner -->
+<div class="bg-surface-elevated rounded-xl p-space-lg lg:p-space-xl relative overflow-hidden shadow-2xl">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-primary-container/20 text-ember-glow font-label-technical text-label-sm">
+<span class="w-2 h-2 rounded-full bg-ember-glow animate-ping mr-1.5"></span>
+                LIVE OVEN TELEMETRY
+              </span>
+<span class="font-label-technical text-label-technical text-ash-muted">ORDER #FS-10248</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-crust-cream">Your pizza is on the way.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-2xs">
+              Arriving in approximately <span class="text-ember-glow font-bold" id="deliveryTimeCounter">18 minutes</span> (Estimated 8:42 PM)
+            </p>
+</div>
+<!-- Heat Gauge Metric Widget -->
+<div class="flex items-center gap-space-md bg-surface-charcoal p-space-md rounded-xl">
+<div class="flex flex-col text-right">
+<span class="font-label-technical text-label-sm text-ash-muted">KILN CORE TEMP</span>
+<span class="font-headline-sm text-headline-sm text-ember-glow">452.8°C</span>
+<span class="font-label-sm text-label-sm text-tertiary">OAK WOOD FIRED</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-ember-glow">
+<span class="material-symbols-outlined text-[28px] animate-pulse">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- 5-Stage Interactive Kiln Progress Timeline -->
+<div class="mt-space-2xl pt-space-lg">
+<div class="relative">
+<!-- Continuous Backing Rail -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container -translate-y-1/2 rounded-full"></div>
+<!-- Progress Fill Rail (60% to Step 3 active) -->
+<div class="absolute top-1/2 left-0 w-[55%] h-1 bg-gradient-to-r from-primary-container to-ember-glow -translate-y-1/2 rounded-full"></div>
+<!-- Steps Grid -->
+<div class="relative z-10 grid grid-cols-5 gap-space-2xs text-center">
+<!-- Step 1: Confirmed -->
+<div class="flex flex-col items-center gap-space-2xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<span class="font-label-technical text-label-sm text-crust-cream">ORDER LOGGED</span>
+<span class="font-label-sm text-label-sm text-ash-muted hidden sm:inline">8:18 PM</span>
+</div>
+<!-- Step 2: Hand Stretch -->
+<div class="flex flex-col items-center gap-space-2xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[20px]">bakery_dining</span>
+</div>
+<span class="font-label-technical text-label-sm text-crust-cream">HAND-STRETCH</span>
+<span class="font-label-sm text-label-sm text-ash-muted hidden sm:inline">8:21 PM</span>
+</div>
+<!-- Step 3: Active In Wood Kiln -->
+<div class="flex flex-col items-center gap-space-2xs">
+<div class="w-12 h-12 -mt-1 rounded-full bg-ember-glow text-on-primary flex items-center justify-center shadow-[0_0_24px_rgba(255,107,53,0.7)] animate-pulse ring-4 ring-ember-glow/30">
+<span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+</div>
+<span class="font-label-technical text-label-sm text-ember-glow font-bold">450°C STONE KILN</span>
+<span class="font-label-sm text-label-sm text-ember-glow">Now Baking · 45s left</span>
+</div>
+<!-- Step 4: Dispatch Thermal -->
+<div class="flex flex-col items-center gap-space-2xs opacity-60">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-ash-muted flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<span class="font-label-technical text-label-sm text-on-surface-variant">HEAT-SHIELD DISPATCH</span>
+<span class="font-label-sm text-label-sm text-ash-muted hidden sm:inline">Est 8:28 PM</span>
+</div>
+<!-- Step 5: Doorstep -->
+<div class="flex flex-col items-center gap-space-2xs opacity-40">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-ash-muted flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">home</span>
+</div>
+<span class="font-label-technical text-label-sm text-ash-muted">DOORSTEP DROP</span>
+<span class="font-label-sm text-label-sm text-ash-muted hidden sm:inline">Est 8:42 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tracking Lower Grid: Live Route Telemetry & Rider Dispatch Profile -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-stretch">
+<!-- Interactive Vector GPS Delivery Map (8 Columns) -->
+<div class="lg:col-span-8 bg-surface-elevated rounded-xl p-space-md lg:p-space-lg flex flex-col justify-between shadow-2xl relative min-h-[460px]">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-ember-glow">navigation</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream">Kiln-to-Door Flight Route</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-charcoal px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-ember-glow"></span>
+<span class="font-label-technical text-label-sm text-crust-cream">GPS LOCK: LIVE 10Hz</span>
+</div>
+</div>
+<!-- Stylized Dark Map Canvas Container -->
+<div class="relative w-full flex-1 rounded-xl bg-surface-charcoal overflow-hidden min-h-[340px] flex items-center justify-center">
+<!-- Map Decorative Grid Lines -->
+<svg class="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FAF7F2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Vector Route Path from Hearth to Destination -->
+<svg class="absolute inset-0 w-full h-full" viewbox="0 0 800 380" xmlns="http://www.w3.org/2000/svg">
+<!-- Route Trunk -->
+<path d="M 120 280 C 220 280, 260 140, 420 160 S 620 100, 680 90" fill="none" stroke="#2E2620" stroke-linecap="round" stroke-width="8"></path>
+<!-- Active Glow Line -->
+<path class="text-ember-glow" d="M 120 280 C 220 280, 260 140, 420 160 S 620 100, 680 90" fill="none" stroke="currentColor" stroke-dasharray="8 6" stroke-linecap="round" stroke-width="4">
+<animate attributename="stroke-dashoffset" dur="8s" from="100" repeatcount="indefinite" to="0"></animate>
+</path>
+<!-- Node 1: Hearth Downtown (Start) -->
+<circle cx="120" cy="280" fill="#D94F1E" r="14"></circle>
+<circle cx="120" cy="280" fill="#FAF7F2" r="6"></circle>
+<text fill="#FAF7F2" font-family="spaceMono" font-size="12" text-anchor="middle" x="120" y="320">FLAGSHIP HEARTH</text>
+<!-- Node 2: Courier Rider Beacon (In Transit simulation) -->
+<g transform="translate(360, 175)">
+<circle cx="0" cy="0" fill="#FF6B35" opacity="0.25" r="22">
+<animate attributename="r" dur="2s" repeatcount="indefinite" values="16;28;16"></animate>
+<animate attributename="opacity" dur="2s" repeatcount="indefinite" values="0.4;0.1;0.4"></animate>
+</circle>
+<circle cx="0" cy="0" fill="#FF6B35" r="10"></circle>
+<circle cx="0" cy="0" fill="#12100E" r="4"></circle>
+<rect fill="#12100E" height="22" rx="4" width="84" x="-42" y="-34"></rect>
+<text fill="#FF6B35" font-family="spaceMono" font-size="9" font-weight="bold" text-anchor="middle" x="0" y="-20">MARCO V. (48 km/h)</text>
+</g>
+<!-- Node 3: Home Destination -->
+<circle cx="680" cy="90" fill="#2E2620" r="14"></circle>
+<circle cx="680" cy="90" fill="#FF6B35" r="6"></circle>
+<text fill="#FAF7F2" font-family="spaceMono" font-size="12" text-anchor="middle" x="680" y="130">EMBER HEIGHTS #402</text>
+</svg>
+<!-- Map HUD Badges -->
+<div class="absolute top-4 left-4 p-space-xs rounded bg-surface-charcoal/90 backdrop-blur-md flex flex-col gap-1">
+<span class="font-label-technical text-label-sm text-ash-muted">DISTRICT CORRIDOR</span>
+<span class="font-label-technical text-label-technical text-crust-cream">INDIRANAGAR MAIN ARTERY</span>
+</div>
+<div class="absolute bottom-4 right-4 p-space-xs rounded bg-surface-charcoal/90 backdrop-blur-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-ember-glow">thermostat</span>
+<span class="font-label-technical text-label-sm text-crust-cream">POD CARRIER TEMP: 89.2°C</span>
+</div>
+</div>
+<!-- Bottom Micro Specs -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs text-on-surface-variant font-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">distance</span>
+<div>
+<p class="font-label-technical text-label-sm text-ash-muted">DISTANCE REMAINING</p>
+<p class="font-title-md text-crust-cream">2.4 Kilometers</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">timer</span>
+<div>
+<p class="font-label-technical text-label-sm text-ash-muted">ETA PRECISION</p>
+<p class="font-title-md text-ember-glow">± 2 Minutes</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">shield</span>
+<div>
+<p class="font-label-technical text-label-sm text-ash-muted">SAFE-SEAL VERIFIED</p>
+<p class="font-title-md text-crust-cream">Tamper-Proof Lock</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Rider Profile & Rapid Operations Deck (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Rider Card -->
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-technical text-label-sm text-ember-glow uppercase">DESIGNATED COURIER</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-technical text-label-sm">FLEET POD #09</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-charcoal overflow-hidden flex-shrink-0 ring-2 ring-primary-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of an artisanal courier pilot wearing a technical charcoal bomber jacket and protective motor gear, cinematic dramatic rim lighting in woodfire pizza brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl93QOVPAHbDSNcB3fSr-BNEMpriw92rXeOqD1r9Oa1DJspri3MLUHGwHN21xYFdNkWxms6R3rcOE2HkDaRxZ8vvGE1FVLy9pKCTguRR9CuVRbuyXt79h5rlvJvwwCzyuwFgSrZbgYWKw0PdTNXVtB0_pBbnfLAyxvtwEfie84cBuhh4bqCI3rssWfP4D7_SYQ71b9glzvrh46lM3Hu01uihvOYktIaiOMXXJzHDz862O3VFmMzGC1kQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-crust-cream truncate">Marco Valeri</h3>
+<div class="flex items-center gap-0.5 text-ember-glow">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="font-label-technical text-label-sm text-crust-cream">4.95</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ducati Scrambler Thermal Unit</p>
+<p class="font-label-sm text-label-sm text-tertiary mt-0.5">840+ Woodfire Drops Delivered</p>
+</div>
+</div>
+<!-- Health & Safety Pill -->
+<div class="bg-surface-charcoal p-space-xs rounded-lg flex items-center justify-between text-ash-muted font-label-sm">
+<span>Rider Thermal Check: <strong class="text-crust-cream">36.4°C</strong></span>
+<span class="text-ember-glow">SANITIZED</span>
+</div>
+<!-- Interactive Direct Call Rider Button -->
+<div class="grid grid-cols-2 gap-space-xs">
+<a class="py-space-xs rounded-lg bg-surface-container text-crust-cream hover:bg-surface-container-high transition-colors font-title-md text-body-sm flex items-center justify-center gap-1" href="tel:+919800012345">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Call Marco</span>
+</a>
+<button class="py-space-xs rounded-lg bg-surface-container text-crust-cream hover:bg-surface-container-high transition-colors font-title-md text-body-sm flex items-center justify-center gap-1" onclick="openLiveChatModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Send Note</span>
+</button>
+</div>
+</div>
+<!-- Order Summary Snapshot in Telemetry View -->
+<div class="bg-surface-elevated rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-crust-cream">Bake Manifest</h3>
+<div class="flex flex-col gap-space-2xs text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span>1× Margherita D.O.P. (12")</span>
+<span class="font-label-technical text-crust-cream">₹449</span>
+</div>
+<div class="flex justify-between items-center">
+<span>1× Diavola Calabrese (12")</span>
+<span class="font-label-technical text-crust-cream">₹399</span>
+</div>
+<div class="flex justify-between items-center text-ember-glow">
+<span>Coupon HEARTHFIRST</span>
+<span class="font-label-technical">-₹60</span>
+</div>
+<div class="pt-space-xs flex justify-between items-center font-title-md text-crust-cream">
+<span>Paid Online (UPI)</span>
+<span class="font-label-technical text-headline-sm text-ember-glow">₹788.40</span>
+</div>
+</div>
+<!-- Quick Re-order and Support Actions -->
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<button class="w-full py-space-xs rounded-lg bg-surface-container text-crust-cream hover:bg-surface-container-high transition-colors font-title-md text-body-sm flex items-center justify-center gap-space-xs" onclick="switchView('checkout')" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Modify / Repeat Order</span>
+</button>
+<button class="w-full py-space-xs rounded-lg bg-surface-charcoal text-on-surface-variant hover:text-crust-cream transition-colors font-title-md text-body-sm flex items-center justify-center gap-space-xs" onclick="openLiveChatModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Hearth Concierge Support</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Concierge Modal (Hidden initially) -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-grid-margin-mobile" id="liveChatModal">
+<div class="bg-surface-elevated max-w-md w-full rounded-2xl p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-ember-glow animate-ping"></span>
+<h3 class="font-headline-sm text-headline-sm text-crust-cream">Hearth Desk Live</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-charcoal flex items-center justify-center text-ash-muted hover:text-crust-cream" onclick="closeLiveChatModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="h-48 overflow-y-auto flex flex-col gap-space-xs p-space-xs bg-surface-charcoal rounded-xl">
+<div class="bg-surface-container p-space-xs rounded text-body-sm text-on-surface-variant max-w-[85%] self-start">
+<p class="font-label-technical text-label-sm text-ember-glow">KILN CONCIERGE</p>
+          Salve! Your 48-hour fermented dough is at 450°C stone bake right now. Any specific gate instructions for rider Marco?
+        </div>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-charcoal p-1 rounded-xl">
+<input class="w-full bg-transparent px-space-sm py-space-xs text-body-sm text-crust-cream focus:outline-none" id="chatInput" placeholder="Message rider or oven chef..." type="text"/>
+<button class="p-space-xs rounded-lg bg-primary-container text-on-primary hover:bg-ember-glow transition-colors" onclick="sendChatMessage()" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    function switchView(viewName) {
+      const checkoutEl = document.getElementById('viewCheckout');
+      const trackingEl = document.getElementById('viewTracking');
+      const btnCheckout = document.getElementById('tabBtnCheckout');
+      const btnTracking = document.getElementById('tabBtnTracking');
+      const labelBreadcrumb = document.getElementById('activeBreadcrumbLabel');
+
+      if (viewName === 'tracking') {
+        checkoutEl.classList.add('hidden');
+        trackingEl.classList.remove('hidden');
+
+        btnCheckout.className = "px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 text-ash-muted hover:text-crust-cream flex items-center gap-space-2xs";
+        btnTracking.className = "px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 bg-primary-container text-on-primary shadow-sm flex items-center gap-space-2xs";
+        labelBreadcrumb.textContent = "02. LIVE KILN TELEMETRY";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        trackingEl.classList.add('hidden');
+        checkoutEl.classList.remove('hidden');
+
+        btnTracking.className = "px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 text-ash-muted hover:text-crust-cream flex items-center gap-space-2xs";
+        btnCheckout.className = "px-space-md py-space-2xs rounded-lg font-title-md text-body-sm transition-all duration-300 bg-primary-container text-on-primary shadow-sm flex items-center gap-space-2xs";
+        labelBreadcrumb.textContent = "01. EXPRESS CHECKOUT";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function placeOrderAndTrack() {
+      switchView('tracking');
+    }
+
+    function setPaymentMethod(method) {
+      const tabs = document.querySelectorAll('.pay-tab');
+      tabs.forEach(t => {
+        t.classList.remove('bg-surface-container-high', 'text-ember-glow');
+        t.classList.add('bg-surface-charcoal', 'text-on-surface-variant');
+      });
+
+      const selected = document.getElementById('payTab-' + method);
+      if (selected) {
+        selected.classList.remove('bg-surface-charcoal', 'text-on-surface-variant');
+        selected.classList.add('bg-surface-container-high', 'text-ember-glow');
+      }
+
+      const upiContent = document.getElementById('paymentContentUpi');
+      const cardContent = document.getElementById('paymentContentCard');
+
+      if (method === 'card') {
+        upiContent.classList.add('hidden');
+        cardContent.classList.remove('hidden');
+        cardContent.classList.add('flex');
+      } else {
+        cardContent.classList.add('hidden');
+        cardContent.classList.remove('flex');
+        upiContent.classList.remove('hidden');
+      }
+    }
+
+    function openLiveChatModal() {
+      const modal = document.getElementById('liveChatModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLiveChatModal() {
+      const modal = document.getElementById('liveChatModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      if (input && input.value.trim() !== "") {
+        input.value = "";
+        alert("Dispatch note transmitted directly to Rider Marco V.");
+        closeLiveChatModal();
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest pt-space-3xl pb-space-2xl"><div class="w-full px-grid-margin-mobile lg:px-grid-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-2xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="FIRE & SLICE Brand Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ9IwS-nK5f2m2ylvVjSAYglrE2tmQ6JmHmlza0vhgtaAmfXmCWQH6nNLpnR7bHYn5X7My5lTG7xCt_CuMJyOBvLvOnDHL-wZtjdym1qcGPYJEJ2zLJv-JUc69UAykin9Rc9nng__gPxf_X1VXA7WrdYZgIGm624ITlzyAd10DMi-i_VvSP31bsvKGedOoWe6VHpENQvdXlG7PXy07N-KMuZYx1bIrOEPsKYf-y0ibEeCmj1-yPo218g"/><span class="font-headline-sm text-headline-sm text-crust-cream">FIRE & SLICE</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Artisanal sourdough fermented for 48 hours, stone-baked at 450°C in hand-built wood ovens for 90 seconds. Uncompromising culinary alchemy delivered to your door.</p><div class="flex items-center gap-space-sm"><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-ember-glow">450°C KILN</span><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-tertiary">90 SEC FLASH</span><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-ash-muted">EST. 2026</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">Cuisine</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-crust-cream transition-colors cursor-pointer">Signature Red Pies</li><li class="hover:text-crust-cream transition-colors cursor-pointer">White Truffle Bianco</li><li class="hover:text-crust-cream transition-colors cursor-pointer">Naturally Leavened Crust</li><li class="hover:text-crust-cream transition-colors cursor-pointer">Cellar Italian Wines</li><li class="hover:text-crust-cream transition-colors cursor-pointer">House Amaro & Sweets</li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">Kiln Locations</h3><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div><p class="font-title-md text-crust-cream">Downtown Flagship Hearth</p><p class="text-ash-muted">742 Ember District Way · (555) 450-FIRE</p><p class="font-label-sm text-label-sm text-ember-glow">Mon-Sun: 11:30 — 23:00</p></div><div><p class="font-title-md text-crust-cream">Arts District Outpost</p><p class="text-ash-muted">108 Foundry Lane · (555) 900-PIE</p><p class="font-label-sm text-label-sm text-ember-glow">Wed-Sun: 16:00 — 00:00</p></div></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">The Kiln Dispatch</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Secret reserve drops, seasonal estate olive harvests, and cellar pairings once monthly.</p><form class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-low p-space-2xs"><input class="w-full bg-transparent px-space-sm font-body-sm text-body-sm text-crust-cream placeholder:text-ash-muted focus:outline-none" placeholder="Enter your dispatch email" type="email"/><button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-body-sm tracking-wide uppercase hover:bg-ember-glow hover:text-on-primary transition-all" type="button">Join</button></div><span class="font-label-sm text-label-sm text-ash-muted">Strict privacy. Curated gastronomic updates only.</span></form></div></div><div class="flex flex-col md:flex-row items-center justify-between pt-space-xl gap-space-md text-on-surface-variant"><span class="font-label-technical text-label-technical text-ash-muted">© 2026 FIRE & SLICE WOOD-FIRED HEARTH. ALL RIGHTS RESERVED.</span><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-ash-muted"><span class="hover:text-crust-cream cursor-pointer">Privacy Policy</span><span class="hover:text-crust-cream cursor-pointer">Terms of Service</span><span class="hover:text-crust-cream cursor-pointer">Kitchen Protocols</span><span class="hover:text-crust-cream cursor-pointer">Nutritional Specs</span></div></div></div></footer></body></html>

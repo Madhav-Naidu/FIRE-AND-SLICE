@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=ebGaramond:wght@100..900&family=spaceGrotesk:wght@100..900&family=spaceMono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#cdc6b5","outline-variant":"#59413a","on-error-container":"#ffdad6","ember-glow":"#FF6B35","on-primary-container":"#521300","on-surface-variant":"#e1bfb5","surface-container-high":"#2d2926","primary-container":"#f46230","surface":"#161310","on-background":"#eae1dc","surface-charcoal":"#12100E","on-tertiary":"#343024","secondary-container":"#8d1d20","surface-container-low":"#1f1b18","surface-container-lowest":"#110e0b","on-secondary-container":"#ff9e98","primary-fixed-dim":"#ffb59e","on-tertiary-fixed-variant":"#4b473a","surface-border":"#2E2620","on-primary-fixed":"#3a0b00","inverse-surface":"#eae1dc","on-primary-fixed-variant":"#842500","tertiary-fixed":"#eae2d0","surface-bright":"#3d3835","surface-dim":"#161310","primary-fixed":"#ffdbd0","crust-cream":"#FAF7F2","on-primary":"#5e1700","surface-container":"#231f1c","error":"#ffb4ab","surface-variant":"#383431","background":"#161310","primary":"#ffb59e","on-tertiary-container":"#2d2a1e","error-container":"#93000a","on-tertiary-fixed":"#1f1b11","on-secondary-fixed-variant":"#8a1b1e","surface-elevated":"#1C1713","surface-tint":"#ffb59e","on-surface":"#eae1dc","on-secondary-fixed":"#410004","on-error":"#690005","secondary-fixed":"#ffdad7","tertiary-fixed-dim":"#cdc6b5","inverse-on-surface":"#34302d","secondary-fixed-dim":"#ffb3ae","on-secondary":"#68000c","outline":"#a98a81","inverse-primary":"#ad3300","secondary":"#ffb3ae","tertiary-container":"#969081","ash-muted":"#8A8178","surface-container-highest":"#383431"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-desktop":"2rem","grid-margin-mobile":"1.25rem","space-md":"1rem","space-2xs":"0.25rem","space-sm":"0.75rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","grid-margin-desktop":"4rem","space-xs":"0.5rem","space-2xl":"4rem","space-3xl":"6rem"},"fontFamily":{"label-sm":["spaceMono"],"headline-lg":["ebGaramond"],"display-hero-mobile":["ebGaramond"],"display-hero":["ebGaramond"],"label-technical":["spaceMono"],"body-md":["spaceGrotesk"],"headline-sm":["ebGaramond"],"body-lg":["spaceGrotesk"],"body-sm":["spaceGrotesk"],"title-md":["spaceGrotesk"],"headline-md":["ebGaramond"],"headline-lg-mobile":["ebGaramond"]},"fontSize":{"label-sm":["0.6875rem",{"lineHeight":"1.2","letterSpacing":"0.08em","fontWeight":"400"}],"headline-lg":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.01em","fontWeight":"500"}],"display-hero-mobile":["3.25rem",{"lineHeight":"1.1","letterSpacing":"-0.01em","fontWeight":"400"}],"display-hero":["5rem",{"lineHeight":"1.05","letterSpacing":"-0.02em","fontWeight":"400"}],"label-technical":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.12em","fontWeight":"700"}],"body-md":["0.9375rem",{"lineHeight":"1.5","fontWeight":"400"}],"headline-sm":["1.75rem",{"lineHeight":"1.3","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.6","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.45","fontWeight":"400"}],"title-md":["1.25rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["2.25rem",{"lineHeight":"1.25","fontWeight":"500"}],"headline-lg-mobile":["2.25rem",{"lineHeight":"1.2","letterSpacing":"0","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-charcoal/90 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-grid-margin-mobile lg:px-grid-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="FIRE & SLICE Brand Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ9IwS-nK5f2m2ylvVjSAYglrE2tmQ6JmHmlza0vhgtaAmfXmCWQH6nNLpnR7bHYn5X7My5lTG7xCt_CuMJyOBvLvOnDHL-wZtjdym1qcGPYJEJ2zLJv-JUc69UAykin9Rc9nng__gPxf_X1VXA7WrdYZgIGm624ITlzyAd10DMi-i_VvSP31bsvKGedOoWe6VHpENQvdXlG7PXy07N-KMuZYx1bIrOEPsKYf-y0ibEeCmj1-yPo218g"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-crust-cream tracking-tight group-hover:text-primary-container transition-colors">FIRE & SLICE</span><span class="font-label-sm text-label-sm uppercase text-ash-muted tracking-widest hidden sm:inline-block">450°C Wood-Fired Craft</span></div></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs tracking-wide transition-colors bg-surface-container-high text-primary font-bold rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="#">Menu</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="build-your-pizza" href="#">Build Your Pizza</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="offers" href="#">Offers</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="track-order" href="#">Track Order</a><a class="px-space-sm py-space-xs font-title-md text-body-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a></nav></div><div class="flex items-center gap-space-sm lg:gap-space-md"><button class="hidden md:flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-low text-ash-muted hover:text-crust-cream hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-ember-glow">local_fire_department</span><span class="font-label-technical text-label-technical tracking-wider text-crust-cream">Downtown Flagship</span><span class="font-label-sm text-label-sm text-ash-muted">· 25-35m</span></button><button aria-label="Search" class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-crust-cream hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Cart" class="relative flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-elevated hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px] text-primary-container">shopping_bag</span><span class="font-label-technical text-label-technical text-crust-cream hidden sm:inline-block">$48.50</span><span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-primary-container text-on-primary font-label-technical text-label-sm flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-space-xs pl-space-2xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full relative selection:bg-primary-container selection:text-on-primary">
+<!-- ================= PRELOADER / INTRO OVERLAY ================= -->
+<div class="fixed inset-0 z-[100] bg-surface-container-lowest flex flex-col items-center justify-between p-space-xl md:p-space-3xl transition-opacity duration-700 ease-out" id="preloader-overlay">
+<div class="w-full flex justify-between items-center max-w-6xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-ember-glow animate-ping"></span>
+<span class="font-label-technical text-label-technical tracking-widest text-primary uppercase">WOOD-FIRED PIZZA · EST. 2026</span>
+</div>
+<button class="px-space-md py-space-2xs bg-surface-container hover:bg-surface-container-high rounded-full font-label-technical text-label-technical text-crust-cream transition-colors" onclick="dismissPreloader()">
+        SKIP INTRO [ESC]
+      </button>
+</div>
+<div class="flex flex-col items-center text-center max-w-2xl px-space-md my-auto">
+<div class="relative w-28 h-28 mb-space-lg flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-container-high" cx="50" cy="50" fill="none" r="44" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-ember-glow transition-all duration-150" cx="50" cy="50" fill="none" id="preloader-circle" r="44" stroke="currentColor" stroke-dasharray="276.46" stroke-dashoffset="276.46" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-[32px] text-ember-glow animate-pulse">local_fire_department</span>
+<span class="font-label-technical text-label-technical text-crust-cream font-bold mt-1" id="preloader-percentage">0%</span>
+</div>
+</div>
+<span class="font-label-technical text-label-technical uppercase text-ash-muted tracking-[0.2em] mb-space-xs">Baking Protocol Initialized</span>
+<h2 class="font-headline-lg text-headline-lg text-crust-cream tracking-tight mb-space-sm">Preparing the oven... 450°C</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">San Marzano tomatoes macerated. 72-hour biga naturally leavened. Hearth stoked with seasoned oak logs.</p>
+</div>
+<div class="w-full max-w-md flex flex-col gap-space-xs text-center">
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container via-ember-glow to-primary w-0 transition-all duration-150" id="preloader-bar"></div>
+</div>
+<div class="flex justify-between items-center font-label-technical text-label-sm text-ash-muted">
+<span>KILN #01 T-STAMP</span>
+<span class="text-ember-glow">STABLE @ 450.4°C</span>
+</div>
+</div>
+</div>
+<!-- ================= HERO SECTION ================= -->
+<section class="relative w-full min-h-[92vh] flex items-center justify-center -mt-20 pt-20 overflow-hidden bg-surface-charcoal">
+<!-- Hero Background Image Scrim -->
+<div class="absolute inset-0 z-0 bg-cover bg-center mix-blend-lighten opacity-40 scale-105 transition-transform duration-1000 ease-out" data-alt="Wood-fired oven interior glowing with orange embers and red fire flames, baking a fresh authentic Neapolitan artisan pizza with bubbly blistered crust and melted buffalo mozzarella" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAe-LRUsOp1MEDNrACirS4WC24UhF2UAdnrylX_djH8kVcrinhe2NjlW3FnQ6SQazCvkBDUJjNqY5oKMoxCMMNqyWZ2nBqx38cwH5mLWiSMtpUNlcG4aGvcNJCtGSophBGoOwJ6AH2UYIlwMOkcxrUPxVK2ZvfvBo-A6pAZiAtpRW9C4jWQtGTatbHAjg2PBPljjxstsNI4HLZQkVnTyKM4OLpCr0x6zFVOlTs8y-fwWNPP_Iyz5S3IcQ')"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-background via-background/70 to-surface-charcoal/80"></div>
+<div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-ember-glow/10 via-transparent to-transparent"></div>
+<div class="relative z-10 w-full px-grid-margin-mobile lg:px-grid-margin-desktop py-space-3xl flex flex-col items-center text-center max-w-5xl mx-auto">
+<!-- Precision Tech Specs Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-2xs rounded-full bg-surface-elevated/90 shadow-xl mb-space-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px] text-ember-glow">science</span>
+<span class="font-label-technical text-label-technical tracking-widest text-primary uppercase">WOOD FIRED // 450°C // 90 SEC</span>
+<span class="w-1.5 h-1.5 rounded-full bg-ember-glow"></span>
+<span class="font-label-technical text-label-sm text-tertiary">72H FERMENTATION</span>
+</div>
+<!-- Hero Typography -->
+<h1 class="font-display-hero text-display-hero text-crust-cream uppercase tracking-tight max-w-4xl leading-[1.02] drop-shadow-2xl mb-space-md">
+        Crafted by Fire.<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-crust-cream via-primary-fixed to-ember-glow">Delivered to You.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl font-normal leading-relaxed">
+        Hand-stretched dough. Slow-fermented crust. Fresh ingredients. Fired hot in hand-built stone kilns and delivered fresh straight to your doorstep.
+      </p>
+<!-- Action Button Group -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md w-full sm:w-auto">
+<button class="w-full sm:w-auto px-space-xl py-space-md bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-md uppercase tracking-wider rounded-lg shadow-[0_12px_32px_-8px_rgba(244,98,48,0.4)] transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-space-xs" onclick="scrollToMenu()">
+<span>ORDER NOW</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto px-space-xl py-space-md bg-surface-elevated hover:bg-surface-container-high text-crust-cream font-title-md text-body-md uppercase tracking-wider rounded-lg shadow-md transition-all flex items-center justify-center gap-space-xs" onclick="toggleCustomizeModal('Fire Margherita', 299)">
+<span>BUILD YOUR PIZZA</span>
+<span class="material-symbols-outlined text-[20px] text-ember-glow">tune</span>
+</button>
+</div>
+<!-- Quick Micro-Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-3xl pt-space-xl w-full max-w-4xl">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">450°C</span>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase">Baking Temp</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">90 SEC</span>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase">Flash Kiln Time</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">72 HRS</span>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase">Dough Hydration</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">100%</span>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase">Italian Stone Ground</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= WHAT ARE YOU CRAVING? (FILTER BAR) ================= -->
+<section class="w-full bg-surface-charcoal/60 backdrop-blur-md sticky top-20 z-40 py-space-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]" id="menu-section">
+<div class="w-full px-grid-margin-mobile lg:px-grid-margin-desktop flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="material-symbols-outlined text-ember-glow text-[20px]">restaurant_menu</span>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-crust-cream">WHAT ARE YOU CRAVING?</span>
+</div>
+<!-- Interactive Pills Container -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs md:pb-0 scrollbar-none" id="filter-pills-row">
+<button class="filter-pill active-pill shrink-0 px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('all', this)">
+<span>🍕 All Pies</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('signature', this)">
+<span>🔥 Signature</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('veg', this)">
+<span>🥬 Veg</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('spicy', this)">
+<span>🌶 Spicy</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('cheese', this)">
+<span>🧀 Cheese Lovers</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('sides', this)">
+<span>🍟 Sides</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('drinks', this)">
+<span>🥤 Drinks</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('desserts', this)">
+<span>🍰 Desserts</span>
+</button>
+<button class="filter-pill shrink-0 px-space-md py-space-xs rounded-full bg-surface-elevated hover:bg-surface-container-high text-on-surface-variant hover:text-crust-cream font-title-md text-body-sm transition-all flex items-center gap-space-2xs" onclick="filterCategory('combos', this)">
+<span>🎁 Combos</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= SIGNATURE PIZZAS SHOWCASE ================= -->
+<section class="w-full py-space-3xl px-grid-margin-mobile lg:px-grid-margin-desktop bg-background">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-ember-glow font-label-technical text-label-technical tracking-widest uppercase mb-space-2xs">
+<span>SIGNATURE // 01</span>
+<span>·</span>
+<span>FIRED @ 450°C</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-crust-cream tracking-tight">Our Most Loved Pizzas</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Each pie is handcrafted to order using ancient mother-dough biga fermented for three suns, blistered atop volcanic biscotto stone.</p>
+</div>
+<!-- Pizza Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg" id="pizza-cards-grid">
+<!-- ITEM 1: Fire Margherita -->
+<article class="pizza-card flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(244,98,48,0.2)] transition-all duration-300 group" data-category="signature veg cheese">
+<div class="relative h-64 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up artisanal Neapolitan Fire Margherita pizza with charred leopard-spot crust, melted fior di latte mozzarella, fresh torn basil leaves and aromatic olive oil drizzle on a dark slab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbDCt--g1Hho1ldUPTrR3sQ9zTmh9eDtSDGpxq1mqM5JbQVoQCOvFU5dUWCeBTJbeke9V5wjTVpAE1Vm5Qn8UTZTzZ1bByhxf52AP8pkp3uRjq-ATRg0bD6nV4lVRKS4hMRl1kjDXTBDa-uiSJHXb5yX-T1Y4AQE_NLZDDGqa3foUQCbjimSJP12E1QETihH9G07WV_aQpJOjP20BQDnRZXJQjlNxGWB9Bz5PYReDr0z-S88UYk5lfuQ"/>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-label-technical text-label-sm text-crust-cream">PURE VEG</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px] text-ember-glow" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold">4.9</span>
+<span class="font-label-technical text-label-sm text-ash-muted">(1.2k)</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div>
+<div class="flex justify-between items-baseline mb-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-crust-cream group-hover:text-primary transition-colors">Fire Margherita</h3>
+<span class="font-label-technical text-title-md text-primary-container font-bold" id="price-margherita">₹299</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">San Marzano DOP tomato pulp, fior di latte mozzarella, aromatic hand-torn basil, cold-pressed EVOO.</p>
+</div>
+<!-- Size Selector Pills -->
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase block mb-1.5">Size Selection</span>
+<div class="grid grid-cols-3 gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="size-btn active-size py-1 text-center font-label-technical text-label-sm rounded bg-primary-container text-on-primary font-bold transition-all" onclick="selectPizzaSize(this, 'price-margherita', 299)">Personal</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-margherita', 469)">Medium</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-margherita', 649)">Large</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-grow py-space-xs px-space-sm bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-sm uppercase rounded-lg shadow-md transition-all flex items-center justify-center gap-1" onclick="addToCartDirect('Fire Margherita', document.getElementById('price-margherita').innerText, 'Personal')">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>ADD TO CART</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-crust-cream transition-colors" onclick="toggleCustomizeModal('Fire Margherita', 299)" title="Customize ingredients">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 2: Smoked Paneer (Required Image https://lh3.googleusercontent.com/aida-public/AB6AXuBqCX8SgCC4Cbp2atb-HmXV0HeY2pACfUf8nJRCKwQS1joYvGOSWdWLD9_uC-WYVgcCuXxmjhy_oG-cWZ143r7b417qf4RLXD8t-6FL9aC0e40kICMi3KVcRp9LtDIcrnjfRfLoxFuFUz-oyGHrJs8n2EcglGQlkRF94y2Fnkho_Xt-k0yGXYg1pml9Sg3qxhbcvgna9YpkyQBJYCw6HBOMaG8sRHK4izgmsvTef44dllGUxnzXp8EF1A) -->
+<article class="pizza-card flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(244,98,48,0.2)] transition-all duration-300 group" data-category="signature veg spicy">
+<div class="relative h-64 w-full overflow-hidden bg-surface-container">
+<img alt="Top-down studio gourmet photo of Smoked Paneer & Fire-Roasted Peppers pizza on rustic dark iron pan, caramelized onions, smoked cheese, charred crust spots, fresh herbs, warm firelit ambient lighting." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqCX8SgCC4Cbp2atb-HmXV0HeY2pACfUf8nJRCKwQS1joYvGOSWdWLD9_uC-WYVgcCuXxmjhy_oG-cWZ143r7b417qf4RLXD8t-6FL9aC0e40kICMi3KVcRp9LtDIcrnjfRfLoxFuFUz-oyGHrJs8n2EcglGQlkRF94y2Fnkho_Xt-k0yGXYg1pml9Sg3qxhbcvgna9YpkyQBJYCw6HBOMaG8sRHK4izgmsvTef44dllGUxnzXp8EF1A"/>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-label-technical text-label-sm text-crust-cream">PURE VEG</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px] text-ember-glow" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold">4.8</span>
+<span class="font-label-technical text-label-sm text-ash-muted">(980)</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div>
+<div class="flex justify-between items-baseline mb-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-crust-cream group-hover:text-primary transition-colors">Smoked Paneer</h3>
+<span class="font-label-technical text-title-md text-primary-container font-bold" id="price-paneer">₹349</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Smoked artisanal cottage cheese, fire-roasted sweet peppers, caramelized shallots, smoked scamorza cheese blend.</p>
+</div>
+<!-- Size Selector Pills -->
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase block mb-1.5">Size Selection</span>
+<div class="grid grid-cols-3 gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="size-btn active-size py-1 text-center font-label-technical text-label-sm rounded bg-primary-container text-on-primary font-bold transition-all" onclick="selectPizzaSize(this, 'price-paneer', 349)">Personal</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-paneer', 529)">Medium</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-paneer', 719)">Large</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-grow py-space-xs px-space-sm bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-sm uppercase rounded-lg shadow-md transition-all flex items-center justify-center gap-1" onclick="addToCartDirect('Smoked Paneer', document.getElementById('price-paneer').innerText, 'Personal')">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>ADD TO CART</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-crust-cream transition-colors" onclick="toggleCustomizeModal('Smoked Paneer', 349)" title="Customize ingredients">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 3: Farmhouse Fire -->
+<article class="pizza-card flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(244,98,48,0.2)] transition-all duration-300 group" data-category="signature veg">
+<div class="relative h-64 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rustic Farmhouse pizza with sautéed cremini wild mushrooms, roasted colorful bell pepper strips, golden corn kernels, fresh oregano sprigs on blistered wood fired crust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-thnkd6HsTEdrSv_GPk78auySX7Z5uXtZ1ZoduCRhZ5vLiqFU8-jHoi5G3q0bfTWDe-rNX88cvUrh_F8B0ZxwdAJg_CQRC-1tj0rZkg06A_FFOcCAoqcLfNZmQM6-r-GS1boGl3bT2dVfxcDLZUA2XN05P6-q6VLLLIyJVlOP-XT5RvxcGT1Mm5C2vm1pwgtey-_YrmZdD1r3xIj4kTEf2sGHyA9-3AvioDHOZssn3HEoUDFFjNJXeQ"/>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-label-technical text-label-sm text-crust-cream">PURE VEG</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px] text-ember-glow" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold">4.7</span>
+<span class="font-label-technical text-label-sm text-ash-muted">(750)</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div>
+<div class="flex justify-between items-baseline mb-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-crust-cream group-hover:text-primary transition-colors">Farmhouse Fire</h3>
+<span class="font-label-technical text-title-md text-primary-container font-bold" id="price-farmhouse">₹329</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Wild cremini mushrooms, charred bell peppers, charred sweet corn, sun-ripened olives, crushed thyme.</p>
+</div>
+<!-- Size Selector Pills -->
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase block mb-1.5">Size Selection</span>
+<div class="grid grid-cols-3 gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="size-btn active-size py-1 text-center font-label-technical text-label-sm rounded bg-primary-container text-on-primary font-bold transition-all" onclick="selectPizzaSize(this, 'price-farmhouse', 329)">Personal</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-farmhouse', 499)">Medium</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-farmhouse', 689)">Large</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-grow py-space-xs px-space-sm bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-sm uppercase rounded-lg shadow-md transition-all flex items-center justify-center gap-1" onclick="addToCartDirect('Farmhouse Fire', document.getElementById('price-farmhouse').innerText, 'Personal')">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>ADD TO CART</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-crust-cream transition-colors" onclick="toggleCustomizeModal('Farmhouse Fire', 329)" title="Customize ingredients">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 4: Chicken Peri-Peri -->
+<article class="pizza-card flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-xl hover:shadow-[0_20px_40px_-15px_rgba(244,98,48,0.2)] transition-all duration-300 group" data-category="signature spicy">
+<div class="relative h-64 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Spicy flame-grilled Peri-Peri Chicken artisan pizza with charred jalapeno slices, roasted red chili rings, fresh mozzarella and a fiery orange peri-peri oil swirl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3pHvT54uCaepwbIuV6zaCZtDtvc2Za4g6hu3Nrg5khrggzkLwEJ8XCQ0qkgKjSBtnBMYEEOhU1w_xGxKoIxhV-_mmlMAI9yMrrau5J1dqLpOstB7kQjb8JwzN0rQGXGluriCYztNqfzNkIa1T1ex2ilJwPaAW10J5h0xCCCXby2SyTJ1xCaDocEM69tC1gYKzVmp1SOlV3DUnJ8YrD3t_9eG9mf0oQwnyzAaNXl2lya9Tl3rPZAJDQ"/>
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-600 inline-block"></span>
+<span class="font-label-technical text-label-sm text-crust-cream">NON-VEG</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-charcoal/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px] text-ember-glow" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold">4.9</span>
+<span class="font-label-technical text-label-sm text-ash-muted">(1.6k)</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-grow justify-between gap-space-md">
+<div>
+<div class="flex justify-between items-baseline mb-space-2xs">
+<h3 class="font-headline-sm text-headline-sm text-crust-cream group-hover:text-primary transition-colors">Chicken Peri-Peri</h3>
+<span class="font-label-technical text-title-md text-primary-container font-bold" id="price-periperi">₹399</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Oak flame-grilled spiced chicken breast, fire-roasted jalapeños, smoked mozzarella, house bird's-eye chili emulsion.</p>
+</div>
+<!-- Size Selector Pills -->
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted uppercase block mb-1.5">Size Selection</span>
+<div class="grid grid-cols-3 gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="size-btn active-size py-1 text-center font-label-technical text-label-sm rounded bg-primary-container text-on-primary font-bold transition-all" onclick="selectPizzaSize(this, 'price-periperi', 399)">Personal</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-periperi', 599)">Medium</button>
+<button class="size-btn py-1 text-center font-label-technical text-label-sm rounded text-on-surface-variant hover:text-crust-cream transition-all" onclick="selectPizzaSize(this, 'price-periperi', 799)">Large</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-grow py-space-xs px-space-sm bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-sm uppercase rounded-lg shadow-md transition-all flex items-center justify-center gap-1" onclick="addToCartDirect('Chicken Peri-Peri', document.getElementById('price-periperi').innerText, 'Personal')">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>ADD TO CART</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-crust-cream transition-colors" onclick="toggleCustomizeModal('Chicken Peri-Peri', 399)" title="Customize ingredients">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ================= OFFERS & CLUB ================= -->
+<section class="w-full py-space-3xl px-grid-margin-mobile lg:px-grid-margin-desktop bg-surface-charcoal relative overflow-hidden">
+<div class="w-full flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md relative z-10">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-primary mb-space-2xs block">FLAME ADVANTAGE CLUB</span>
+<h2 class="font-headline-lg text-headline-lg text-crust-cream tracking-tight">More Pizza. More Value.</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Tap on any promo ticket below to copy the dispatch voucher code directly into your active cart order.</p>
+</div>
+<!-- Offers Voucher Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative z-10">
+<!-- Offer 1 -->
+<div class="bg-surface-elevated p-space-xl rounded-xl relative overflow-hidden group shadow-xl hover:shadow-[0_10px_30px_rgba(244,98,48,0.25)] transition-all">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-colors"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container font-label-technical text-label-sm text-ember-glow">FIRST FLAME ORDER</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">20% OFF</span>
+</div>
+<h3 class="font-title-md text-title-md text-crust-cream mb-space-xs">Welcome to the Hearth</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Get 20% discount on your first wood-fired order above ₹499. Fresh artisanal dough guaranteed.</p>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-sm text-ash-muted">COUPON CODE</span>
+<span class="font-label-technical text-body-md text-primary font-bold tracking-widest">FIRST20</span>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-crust-cream font-label-technical text-label-technical uppercase rounded transition-colors flex items-center gap-1" onclick="copyCoupon('FIRST20')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>COPY</span>
+</button>
+</div>
+</div>
+<!-- Offer 2 -->
+<div class="bg-surface-elevated p-space-xl rounded-xl relative overflow-hidden group shadow-xl hover:shadow-[0_10px_30px_rgba(244,98,48,0.25)] transition-all">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-ember-glow/10 rounded-full blur-2xl group-hover:bg-ember-glow/20 transition-colors"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container font-label-technical text-label-sm text-ember-glow">KILN COMBO</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">₹499 FLAT</span>
+</div>
+<h3 class="font-title-md text-title-md text-crust-cream mb-space-xs">Weekend Feast Pack</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Any Medium Signature Pizza + Truffle Garlic Knots + 2 House Cold Brews or Amaro Spritz.</p>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-sm text-ash-muted">COUPON CODE</span>
+<span class="font-label-technical text-body-md text-primary font-bold tracking-widest">WEEKEND499</span>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-crust-cream font-label-technical text-label-technical uppercase rounded transition-colors flex items-center gap-1" onclick="copyCoupon('WEEKEND499')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>COPY</span>
+</button>
+</div>
+</div>
+<!-- Offer 3 -->
+<div class="bg-surface-elevated p-space-xl rounded-xl relative overflow-hidden group shadow-xl hover:shadow-[0_10px_30px_rgba(244,98,48,0.25)] transition-all">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container font-label-technical text-label-sm text-ember-glow">COMMUNAL TABLE</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream font-bold">BUY 2 GET 1</span>
+</div>
+<h3 class="font-title-md text-title-md text-crust-cream mb-space-xs">Trio Kiln Special</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Order any two Large gourmet pies and receive a classic Neapolitan Margherita on the house.</p>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-technical text-label-sm text-ash-muted">COUPON CODE</span>
+<span class="font-label-technical text-body-md text-primary font-bold tracking-widest">BUY2GET1</span>
+</div>
+<button class="px-space-md py-space-xs bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-crust-cream font-label-technical text-label-technical uppercase rounded transition-colors flex items-center gap-1" onclick="copyCoupon('BUY2GET1')">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>COPY</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= REVIEWS & CRAFT STORY ================= -->
+<section class="w-full py-space-3xl px-grid-margin-mobile lg:px-grid-margin-desktop bg-background">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left Narrative Spec -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div>
+<span class="font-label-technical text-label-technical uppercase tracking-widest text-ember-glow mb-space-2xs block">THE CRAFT PHILOSOPHY</span>
+<h2 class="font-headline-lg text-headline-lg text-crust-cream tracking-tight">Slow Fermentation.<br/>72-Hour Biga.<br/>Italian Volcanic Stone.</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
+          We reject hurried dough. Our proprietary natural mother sourdough rests cold-fermented for a minimum of 72 hours. When slid into our 450°C wood kiln, intense thermal radiation shocks trapped micro-gases, creating an ultra-light, blistered, honeycombed cornicione that digests effortlessly.
+        </p>
+<!-- Technical Telemetry Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-elevated">
+<span class="font-label-technical text-label-sm text-ash-muted block mb-1">HYDRATION RATE</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream">74.5%</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-elevated">
+<span class="font-label-technical text-label-sm text-ash-muted block mb-1">OVEN FLOOR</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream">Biscotto</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-elevated col-span-2 sm:col-span-1">
+<span class="font-label-technical text-label-sm text-ash-muted block mb-1">WOOD VARIETY</span>
+<span class="font-headline-sm text-headline-sm text-crust-cream">Aged Oak</span>
+</div>
+</div>
+<!-- Curated Review Snippet -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1 text-ember-glow">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-crust-cream italic">"Easily the most transcendent wood-fired crust in the entire metropolis. The charred leopard spots carry a sublime hazelnut aroma. Arrived blistering hot."</p>
+<div class="flex items-center justify-between text-ash-muted pt-space-xs font-label-technical text-label-sm">
+<span>— Marco Valenti, Gastronomy Critic</span>
+<span>VERIFIED PATRON</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase / Process Diagram -->
+<div class="lg:col-span-6 grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-md">
+<div class="h-64 rounded-xl overflow-hidden shadow-xl bg-surface-elevated">
+<img class="w-full h-full object-cover" data-alt="Baker hand-stretching artisan pizza dough ball on dark wooden table sprinkled with white semolina flour in warm atmospheric kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAENWiywxQ_rfsGWXEwf-CvLYBeE3d0I5cy4aJQh3rtGA1mfiWWtf3hpLln4fu_FhPMtk9clxIMgDgcpoJOLZGZffMjMS9Ri4RLVv0BbpCP67JBlzuvaQnEZhZNTiEoab5xUTGGCdwDICmn6wZIoMxX1lZ017787J8PP6YC_WvTT9wc9AWxJ3JCLuuNmL3h-iL3rkjX5LI1GzrF7hFgWM3RH0aWxXrMJpo0BtJS9Gc_KjTmkdjfKNMIqg"/>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-elevated flex flex-col justify-center">
+<span class="font-label-technical text-label-sm text-primary mb-1">STEP 01</span>
+<h4 class="font-headline-sm text-headline-sm text-crust-cream mb-1">Cold Biga Matrix</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Triple-phase natural fermentation developing deep complex aromatics and bubbly alveolar structure.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-md pt-space-xl">
+<div class="p-space-lg rounded-xl bg-surface-elevated flex flex-col justify-center">
+<span class="font-label-technical text-label-sm text-ember-glow mb-1">STEP 02</span>
+<h4 class="font-headline-sm text-headline-sm text-crust-cream mb-1">450°C Thermal Shock</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid caramelization of wild grain sugars locking in moist crumb with blistering outer char.</p>
+</div>
+<div class="h-64 rounded-xl overflow-hidden shadow-xl bg-surface-elevated">
+<img class="w-full h-full object-cover" data-alt="Freshly baked artisan pizza pulled out of the fiery kiln with long metal peel, bubbling cheese and smoking fragrant herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtkWbeJ__U1cLdrx8fX2u1suJBB8SGM-q7512VVLs45M7eCP1SsTfbu4iWVxDFHr5ys6ZXiPMpwLFbDTfXscieFt4QOW5XP63zTLL8ngRLHI7uKvcDeo77_ewnbamsmteNHmTexyM_8mNJv8KQy9P38-QO0FKSSezolcdOwHRuXH-1dQ2nBC2OEauvGoqYCD65fqv4jmRDFuirVp0Tbaw2khlauZsb_MZHVeZ8Avi4YHj7YZJ0cZmzzA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= INTERACTIVE CART DRAWER ================= -->
+<aside class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-charcoal/95 backdrop-blur-2xl z-[80] shadow-[-16px_0_50px_rgba(0,0,0,0.8)] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="cart-drawer">
+<!-- Header -->
+<div class="p-space-lg flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[24px]">local_mall</span>
+<h3 class="font-headline-sm text-headline-sm text-crust-cream">Your Kiln Order</h3>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-technical text-label-sm font-bold" id="cart-counter-badge">2</span>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-crust-cream transition-colors" onclick="toggleCart()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Free Delivery Tier Bar -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-technical text-label-sm">
+<span class="text-crust-cream flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-ember-glow">moped</span>
+<span>Add ₹150 for FREE DELIVERY</span>
+</span>
+<span class="text-ember-glow font-bold">75%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-3/4"></div>
+</div>
+</div>
+<!-- Items List -->
+<div class="flex-grow overflow-y-auto p-space-lg flex flex-col gap-space-md" id="cart-items-container">
+<!-- Cart Item 1 -->
+<div class="p-space-md rounded-xl bg-surface-elevated flex flex-col gap-space-xs relative group" id="cart-item-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-title-md text-body-lg text-crust-cream font-bold">Fire Margherita</h4>
+<span class="font-label-technical text-label-sm text-ash-muted">Personal (8") · 72h Sourdough</span>
+</div>
+<span class="font-label-technical text-body-md text-primary-container font-bold">₹299</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-2 py-1 rounded-md">
+<button class="text-ash-muted hover:text-crust-cream font-bold px-1 text-sm" onclick="changeQuantity(1, -1)">-</button>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold" id="item-qty-1">1</span>
+<button class="text-ash-muted hover:text-crust-cream font-bold px-1 text-sm" onclick="changeQuantity(1, 1)">+</button>
+</div>
+<button class="text-ash-muted hover:text-error transition-colors text-label-sm font-label-technical flex items-center gap-1" onclick="removeCartItem('cart-item-1', 299)">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="p-space-md rounded-xl bg-surface-elevated flex flex-col gap-space-xs relative group" id="cart-item-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-title-md text-body-lg text-crust-cream font-bold">Smoked Paneer</h4>
+<span class="font-label-technical text-label-sm text-ash-muted">Medium (11") · Extra Fresh Basil</span>
+</div>
+<span class="font-label-technical text-body-md text-primary-container font-bold">₹529</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-2 py-1 rounded-md">
+<button class="text-ash-muted hover:text-crust-cream font-bold px-1 text-sm" onclick="changeQuantity(2, -1)">-</button>
+<span class="font-label-technical text-label-sm text-crust-cream font-bold" id="item-qty-2">1</span>
+<button class="text-ash-muted hover:text-crust-cream font-bold px-1 text-sm" onclick="changeQuantity(2, 1)">+</button>
+</div>
+<button class="text-ash-muted hover:text-error transition-colors text-label-sm font-label-technical flex items-center gap-1" onclick="removeCartItem('cart-item-2', 529)">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Promo Code + Checkout Footer -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-col gap-space-md">
+<!-- Promo Code Field -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-1">
+<input class="w-full bg-transparent px-space-sm font-label-technical text-label-sm text-crust-cream uppercase placeholder:text-ash-muted focus:outline-none" id="cart-coupon-input" placeholder="Promo code (e.g. FIRST20)" type="text"/>
+<button class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-primary-container text-crust-cream hover:text-on-primary font-label-technical text-label-technical transition-colors" onclick="applyVoucher()">APPLY</button>
+</div>
+<!-- Financial Calculations -->
+<div class="flex flex-col gap-1 text-body-sm font-label-technical text-ash-muted">
+<div class="flex justify-between">
+<span>Subtotal</span>
+<span class="text-crust-cream" id="cart-subtotal-val">₹828.00</span>
+</div>
+<div class="flex justify-between" id="discount-row" style="display: none;">
+<span class="text-ember-glow">Voucher Discount</span>
+<span class="text-ember-glow" id="cart-discount-val">-₹0.00</span>
+</div>
+<div class="flex justify-between">
+<span>Kiln Packaging & Taxes</span>
+<span class="text-crust-cream">₹42.00</span>
+</div>
+<div class="flex justify-between font-bold text-title-md text-crust-cream pt-1">
+<span>Total Payable</span>
+<span class="text-primary-container" id="cart-total-val">₹870.00</span>
+</div>
+</div>
+<button class="w-full py-space-md bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-md uppercase tracking-wider rounded-lg shadow-xl transition-all flex items-center justify-center gap-space-xs" onclick="checkoutOrder()">
+<span>PROCEED TO CHECKOUT</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</aside>
+<!-- ================= CUSTOMIZE PIZZA MODAL ================= -->
+<div class="fixed inset-0 z-[90] bg-surface-charcoal/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="customize-modal">
+<div class="bg-surface-elevated max-w-lg w-full rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-between">
+<div>
+<span class="font-label-technical text-label-sm text-ember-glow block uppercase">Wood-Fired Alchemy</span>
+<h3 class="font-headline-sm text-headline-sm text-crust-cream" id="custom-pizza-title">Custom Pizza</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-crust-cream" onclick="toggleCustomizeModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-space-lg overflow-y-auto flex flex-col gap-space-lg">
+<!-- Crust type -->
+<div>
+<label class="font-label-technical text-label-technical text-ash-muted block uppercase mb-space-xs">1. Sourdough Crust Style</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<label class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-xs cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="accent-ember-glow" name="crust" type="radio"/>
+<span class="font-body-sm text-crust-cream">72h Neapolitan Biga</span>
+</label>
+<label class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-xs cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-ember-glow" name="crust" type="radio"/>
+<span class="font-body-sm text-crust-cream">Ancient Grain Spelt (+₹40)</span>
+</label>
+</div>
+</div>
+<!-- Addons / Extra Toppings -->
+<div>
+<label class="font-label-technical text-label-technical text-ash-muted block uppercase mb-space-xs">2. Elevated Additions</label>
+<div class="flex flex-col gap-space-xs">
+<label class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="accent-ember-glow" id="addon-truffle" onchange="updateCustomizeTotal()" type="checkbox"/>
+<span class="font-body-sm text-crust-cream">White Truffle Oil Finish</span>
+</div>
+<span class="font-label-technical text-label-sm text-primary">+₹60</span>
+</label>
+<label class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="accent-ember-glow" id="addon-burrata" onchange="updateCustomizeTotal()" type="checkbox"/>
+<span class="font-body-sm text-crust-cream">Fresh Center Burrata Ball</span>
+</div>
+<span class="font-label-technical text-label-sm text-primary">+₹120</span>
+</label>
+<label class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<input class="accent-ember-glow" id="addon-hot-honey" onchange="updateCustomizeTotal()" type="checkbox"/>
+<span class="font-body-sm text-crust-cream">Calabrian Hot Honey Drizzle</span>
+</div>
+<span class="font-label-technical text-label-sm text-primary">+₹45</span>
+</label>
+</div>
+</div>
+</div>
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-between">
+<div>
+<span class="font-label-technical text-label-sm text-ash-muted block">Configured Total</span>
+<span class="font-label-technical text-headline-sm text-primary-container font-bold" id="custom-modal-price">₹299</span>
+</div>
+<button class="px-space-xl py-space-sm bg-primary-container hover:bg-ember-glow text-on-primary font-title-md text-body-sm uppercase rounded-lg shadow-md transition-all" onclick="confirmCustomPizza()">
+          ADD CUSTOM PIE
+        </button>
+</div>
+</div>
+</div>
+<!-- Floating Toast Notification -->
+<div class="fixed bottom-6 right-6 z-[110] bg-surface-elevated text-crust-cream px-space-md py-space-sm rounded-lg shadow-2xl flex items-center gap-space-xs transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notify">
+<span class="material-symbols-outlined text-ember-glow text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toast-message">Item added to your order</span>
+</div>
+</div>
+<!-- ================= INLINE SCRIPTS (INTERACTIONS) ================= -->
+<script>
+  // 1. Preloader Logic (0-100% Progress Counter)
+  (function initPreloader() {
+    let progress = 0;
+    const circle = document.getElementById('preloader-circle');
+    const bar = document.getElementById('preloader-bar');
+    const text = document.getElementById('preloader-percentage');
+    const overlay = document.getElementById('preloader-overlay');
+    const totalCircumference = 276.46;
+
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 12) + 4;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+        setTimeout(() => {
+          dismissPreloader();
+        }, 300);
+      }
+      text.innerText = progress + '%';
+      bar.style.width = progress + '%';
+      const offset = totalCircumference - (progress / 100) * totalCircumference;
+      circle.style.strokeDashoffset = offset;
+    }, 60);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') dismissPreloader();
+    });
+  })();
+
+  function dismissPreloader() {
+    const overlay = document.getElementById('preloader-overlay');
+    if (!overlay) return;
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => overlay.remove(), 700);
+  }
+
+  function scrollToMenu() {
+    const el = document.getElementById('menu-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // 2. Filter Pills Category Switching
+  function filterCategory(category, buttonEl) {
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary');
+      btn.classList.add('bg-surface-elevated', 'text-on-surface-variant');
+    });
+    buttonEl.classList.remove('bg-surface-elevated', 'text-on-surface-variant');
+    buttonEl.classList.add('bg-primary-container', 'text-on-primary');
+
+    const cards = document.querySelectorAll('.pizza-card');
+    cards.forEach(card => {
+      if (category === 'all') {
+        card.style.display = 'flex';
+      } else {
+        const cats = card.getAttribute('data-category') || '';
+        card.style.display = cats.includes(category) ? 'flex' : 'none';
+      }
+    });
+  }
+
+  // 3. Dynamic Size Pricing
+  function selectPizzaSize(btn, priceTargetId, priceVal) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll('.size-btn').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold');
+      b.classList.add('text-on-surface-variant');
+    });
+    btn.classList.remove('text-on-surface-variant');
+    btn.classList.add('bg-primary-container', 'text-on-primary', 'font-bold');
+
+    const target = document.getElementById(priceTargetId);
+    if (target) {
+      target.innerText = '₹' + priceVal;
+    }
+  }
+
+  // 4. Cart Drawer Toggle & Operations
+  let cartSubtotal = 828;
+  let cartDiscount = 0;
+
+  function toggleCart() {
+    const drawer = document.getElementById('cart-drawer');
+    if (!drawer) return;
+    drawer.classList.toggle('translate-x-full');
+  }
+
+  // Attach to shell cart buttons if available
+  document.querySelectorAll('[aria-label="Cart"]').forEach(btn => {
+    btn.onclick = toggleCart;
+  });
+
+  function addToCartDirect(name, priceStr, size) {
+    const numPrice = parseInt(priceStr.replace('₹', '')) || 299;
+    const container = document.getElementById('cart-items-container');
+    const itemId = 'cart-' + Date.now();
+
+    const itemHtml = `
+      <div class="p-space-md rounded-xl bg-surface-elevated flex flex-col gap-space-xs relative group" id="${itemId}">
+        <div class="flex justify-between items-start">
+          <div>
+            <h4 class="font-title-md text-body-lg text-crust-cream font-bold">${name}</h4>
+            <span class="font-label-technical text-label-sm text-ash-muted">${size} · Wood Fired</span>
+          </div>
+          <span class="font-label-technical text-body-md text-primary-container font-bold">${priceStr}</span>
+        </div>
+        <div class="flex items-center justify-between pt-space-xs">
+          <div class="flex items-center gap-space-xs bg-surface-container-low px-2 py-1 rounded-md">
+            <span class="font-label-technical text-label-sm text-crust-cream font-bold">Qty: 1</span>
+          </div>
+          <button onclick="removeCartItem('${itemId}', ${numPrice})" class="text-ash-muted hover:text-error transition-colors text-label-sm font-label-technical flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">delete</span>
+            <span>Remove</span>
+          </button>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', itemHtml);
+    cartSubtotal += numPrice;
+    updateCartTotals();
+    showToast(`Added ${name} to order`);
+    toggleCart();
+  }
+
+  function changeQuantity(idNum, delta) {
+    const qtySpan = document.getElementById('item-qty-' + idNum);
+    if (!qtySpan) return;
+    let qty = parseInt(qtySpan.innerText) + delta;
+    if (qty < 1) qty = 1;
+    qtySpan.innerText = qty;
+  }
+
+  function removeCartItem(itemId, price) {
+    const item = document.getElementById(itemId);
+    if (item) {
+      item.remove();
+      cartSubtotal = Math.max(0, cartSubtotal - price);
+      updateCartTotals();
+      showToast('Item removed from cart');
+    }
+  }
+
+  function updateCartTotals() {
+    const subtotalEl = document.getElementById('cart-subtotal-val');
+    const totalEl = document.getElementById('cart-total-val');
+    const badge = document.getElementById('cart-counter-badge');
+    const totalItems = document.getElementById('cart-items-container').children.length;
+
+    if (badge) badge.innerText = totalItems;
+    if (subtotalEl) subtotalEl.innerText = '₹' + cartSubtotal.toFixed(2);
+    
+    const payable = Math.max(0, cartSubtotal - cartDiscount + (cartSubtotal > 0 ? 42 : 0));
+    if (totalEl) totalEl.innerText = '₹' + payable.toFixed(2);
+  }
+
+  function copyCoupon(code) {
+    navigator.clipboard?.writeText(code);
+    const input = document.getElementById('cart-coupon-input');
+    if (input) input.value = code;
+    showToast(`Voucher ${code} copied!`);
+  }
+
+  function applyVoucher() {
+    const input = document.getElementById('cart-coupon-input');
+    const val = input.value.trim().toUpperCase();
+    const discountRow = document.getElementById('discount-row');
+    const discountVal = document.getElementById('cart-discount-val');
+
+    if (val === 'FIRST20') {
+      cartDiscount = cartSubtotal * 0.20;
+      discountRow.style.display = 'flex';
+      discountVal.innerText = '-₹' + cartDiscount.toFixed(2);
+      updateCartTotals();
+      showToast('Voucher FIRST20 Applied: 20% OFF!');
+    } else if (val === 'WEEKEND499' || val === 'BUY2GET1') {
+      cartDiscount = 100;
+      discountRow.style.display = 'flex';
+      discountVal.innerText = '-₹' + cartDiscount.toFixed(2);
+      updateCartTotals();
+      showToast(`Voucher ${val} Applied!`);
+    } else {
+      showToast('Invalid or expired coupon code');
+    }
+  }
+
+  function checkoutOrder() {
+    showToast('Redirecting to secure hearth checkout...');
+  }
+
+  // 5. Customize Modal Logic
+  let currentBasePrice = 299;
+  let currentPizzaName = 'Fire Margherita';
+
+  function toggleCustomizeModal(name, basePrice) {
+    const modal = document.getElementById('customize-modal');
+    if (!modal) return;
+    if (modal.classList.contains('hidden')) {
+      currentPizzaName = name || 'Fire Margherita';
+      currentBasePrice = basePrice || 299;
+      document.getElementById('custom-pizza-title').innerText = currentPizzaName;
+      document.getElementById('addon-truffle').checked = false;
+      document.getElementById('addon-burrata').checked = false;
+      document.getElementById('addon-hot-honey').checked = false;
+      updateCustomizeTotal();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function updateCustomizeTotal() {
+    let total = currentBasePrice;
+    if (document.getElementById('addon-truffle')?.checked) total += 60;
+    if (document.getElementById('addon-burrata')?.checked) total += 120;
+    if (document.getElementById('addon-hot-honey')?.checked) total += 45;
+    document.getElementById('custom-modal-price').innerText = '₹' + total;
+  }
+
+  function confirmCustomPizza() {
+    const priceText = document.getElementById('custom-modal-price').innerText;
+    toggleCustomizeModal();
+    addToCartDirect(currentPizzaName + ' (Custom)', priceText, 'Personalized');
+  }
+
+  // 6. Toast Notification Helper
+  function showToast(msg) {
+    const toast = document.getElementById('toast-notify');
+    const msgEl = document.getElementById('toast-message');
+    if (!toast || !msgEl) return;
+    msgEl.innerText = msg;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2400);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest pt-space-3xl pb-space-2xl"><div class="w-full px-grid-margin-mobile lg:px-grid-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-2xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="FIRE & SLICE Brand Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ9IwS-nK5f2m2ylvVjSAYglrE2tmQ6JmHmlza0vhgtaAmfXmCWQH6nNLpnR7bHYn5X7My5lTG7xCt_CuMJyOBvLvOnDHL-wZtjdym1qcGPYJEJ2zLJv-JUc69UAykin9Rc9nng__gPxf_X1VXA7WrdYZgIGm624ITlzyAd10DMi-i_VvSP31bsvKGedOoWe6VHpENQvdXlG7PXy07N-KMuZYx1bIrOEPsKYf-y0ibEeCmj1-yPo218g"/><span class="font-headline-sm text-headline-sm text-crust-cream">FIRE & SLICE</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Artisanal sourdough fermented for 48 hours, stone-baked at 450°C in hand-built wood ovens for 90 seconds. Uncompromising culinary alchemy delivered to your door.</p><div class="flex items-center gap-space-sm"><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-ember-glow">450°C KILN</span><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-tertiary">90 SEC FLASH</span><span class="px-space-sm py-space-2xs rounded-sm bg-surface-elevated font-label-technical text-label-technical text-ash-muted">EST. 2026</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">Cuisine</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class="hover:text-crust-cream transition-colors cursor-pointer">Signature Red Pies</li><li class="hover:text-crust-cream transition-colors cursor-pointer">White Truffle Bianco</li><li class="hover:text-crust-cream transition-colors cursor-pointer">Naturally Leavened Crust</li><li class="hover:text-crust-cream transition-colors cursor-pointer">Cellar Italian Wines</li><li class="hover:text-crust-cream transition-colors cursor-pointer">House Amaro & Sweets</li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">Kiln Locations</h3><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div><p class="font-title-md text-crust-cream">Downtown Flagship Hearth</p><p class="text-ash-muted">742 Ember District Way · (555) 450-FIRE</p><p class="font-label-sm text-label-sm text-ember-glow">Mon-Sun: 11:30 — 23:00</p></div><div><p class="font-title-md text-crust-cream">Arts District Outpost</p><p class="text-ash-muted">108 Foundry Lane · (555) 900-PIE</p><p class="font-label-sm text-label-sm text-ember-glow">Wed-Sun: 16:00 — 00:00</p></div></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-technical text-label-technical uppercase tracking-widest text-primary">The Kiln Dispatch</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Secret reserve drops, seasonal estate olive harvests, and cellar pairings once monthly.</p><form class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-low p-space-2xs"><input class="w-full bg-transparent px-space-sm font-body-sm text-body-sm text-crust-cream placeholder:text-ash-muted focus:outline-none" placeholder="Enter your dispatch email" type="email"/><button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary font-title-md text-body-sm tracking-wide uppercase hover:bg-ember-glow hover:text-on-primary transition-all" type="button">Join</button></div><span class="font-label-sm text-label-sm text-ash-muted">Strict privacy. Curated gastronomic updates only.</span></form></div></div><div class="flex flex-col md:flex-row items-center justify-between pt-space-xl gap-space-md text-on-surface-variant"><span class="font-label-technical text-label-technical text-ash-muted">© 2026 FIRE & SLICE WOOD-FIRED HEARTH. ALL RIGHTS RESERVED.</span><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-ash-muted"><span class="hover:text-crust-cream cursor-pointer">Privacy Policy</span><span class="hover:text-crust-cream cursor-pointer">Terms of Service</span><span class="hover:text-crust-cream cursor-pointer">Kitchen Protocols</span><span class="hover:text-crust-cream cursor-pointer">Nutritional Specs</span></div></div></div></footer></body></html>

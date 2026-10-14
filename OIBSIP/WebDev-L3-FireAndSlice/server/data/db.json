@@ -1,0 +1,417 @@
+{
+  "inventory": [
+    {
+      "_id": "inv_base_1",
+      "category": "base",
+      "name": "72h Neapolitan Biga",
+      "stock": 77,
+      "unit": "crusts",
+      "threshold": 25,
+      "price": 60
+    },
+    {
+      "_id": "inv_base_2",
+      "category": "base",
+      "name": "Thin Crust",
+      "stock": 65,
+      "unit": "crusts",
+      "threshold": 20,
+      "price": 50
+    },
+    {
+      "_id": "inv_base_3",
+      "category": "base",
+      "name": "Regular Crust",
+      "stock": 70,
+      "unit": "crusts",
+      "threshold": 20,
+      "price": 60
+    },
+    {
+      "_id": "inv_base_4",
+      "category": "base",
+      "name": "Thick Crust",
+      "stock": 45,
+      "unit": "crusts",
+      "threshold": 20,
+      "price": 70
+    },
+    {
+      "_id": "inv_base_5",
+      "category": "base",
+      "name": "Cheese Burst",
+      "stock": 32,
+      "unit": "crusts",
+      "threshold": 15,
+      "price": 100
+    },
+    {
+      "_id": "inv_base_6",
+      "category": "base",
+      "name": "Wheat Crust",
+      "stock": 40,
+      "unit": "crusts",
+      "threshold": 20,
+      "price": 80
+    },
+    {
+      "_id": "inv_sauce_1",
+      "category": "sauce",
+      "name": "San Marzano DOP",
+      "stock": 34,
+      "unit": "litres",
+      "threshold": 15,
+      "price": 30
+    },
+    {
+      "_id": "inv_sauce_2",
+      "category": "sauce",
+      "name": "Marinara",
+      "stock": 55,
+      "unit": "litres",
+      "threshold": 20,
+      "price": 20
+    },
+    {
+      "_id": "inv_sauce_3",
+      "category": "sauce",
+      "name": "Pesto",
+      "stock": 28,
+      "unit": "litres",
+      "threshold": 12,
+      "price": 30
+    },
+    {
+      "_id": "inv_sauce_4",
+      "category": "sauce",
+      "name": "BBQ",
+      "stock": 35,
+      "unit": "litres",
+      "threshold": 15,
+      "price": 25
+    },
+    {
+      "_id": "inv_sauce_5",
+      "category": "sauce",
+      "name": "Alfredo",
+      "stock": 24,
+      "unit": "litres",
+      "threshold": 10,
+      "price": 35
+    },
+    {
+      "_id": "inv_sauce_6",
+      "category": "sauce",
+      "name": "Spicy Red",
+      "stock": 38,
+      "unit": "litres",
+      "threshold": 15,
+      "price": 25
+    },
+    {
+      "_id": "inv_cheese_1",
+      "category": "cheese",
+      "name": "Fior di Latte Mozzarella",
+      "stock": 52,
+      "unit": "kg",
+      "threshold": 20,
+      "price": 40
+    },
+    {
+      "_id": "inv_cheese_2",
+      "category": "cheese",
+      "name": "Mozzarella",
+      "stock": 75,
+      "unit": "kg",
+      "threshold": 25,
+      "price": 40
+    },
+    {
+      "_id": "inv_cheese_3",
+      "category": "cheese",
+      "name": "Cheddar",
+      "stock": 45,
+      "unit": "kg",
+      "threshold": 15,
+      "price": 45
+    },
+    {
+      "_id": "inv_cheese_4",
+      "category": "cheese",
+      "name": "Parmesan",
+      "stock": 35,
+      "unit": "kg",
+      "threshold": 15,
+      "price": 50
+    },
+    {
+      "_id": "inv_cheese_5",
+      "category": "cheese",
+      "name": "Vegan Cheese",
+      "stock": 22,
+      "unit": "kg",
+      "threshold": 10,
+      "price": 60
+    },
+    {
+      "_id": "inv_veg_1",
+      "category": "vegetable",
+      "name": "Fire-Roasted Peppers",
+      "stock": 35,
+      "unit": "kg",
+      "threshold": 10,
+      "price": 15
+    },
+    {
+      "_id": "inv_veg_2",
+      "category": "vegetable",
+      "name": "Onions",
+      "stock": 65,
+      "unit": "kg",
+      "threshold": 25,
+      "price": 10
+    },
+    {
+      "_id": "inv_veg_3",
+      "category": "vegetable",
+      "name": "Tomatoes",
+      "stock": 58,
+      "unit": "kg",
+      "threshold": 20,
+      "price": 10
+    },
+    {
+      "_id": "inv_veg_4",
+      "category": "vegetable",
+      "name": "Mushrooms",
+      "stock": 42,
+      "unit": "kg",
+      "threshold": 15,
+      "price": 20
+    },
+    {
+      "_id": "inv_veg_5",
+      "category": "vegetable",
+      "name": "Olives",
+      "stock": 30,
+      "unit": "kg",
+      "threshold": 12,
+      "price": 15
+    },
+    {
+      "_id": "inv_veg_6",
+      "category": "vegetable",
+      "name": "Jalapeños",
+      "stock": 26,
+      "unit": "kg",
+      "threshold": 10,
+      "price": 15
+    },
+    {
+      "_id": "inv_veg_7",
+      "category": "vegetable",
+      "name": "Corn",
+      "stock": 48,
+      "unit": "kg",
+      "threshold": 15,
+      "price": 10
+    },
+    {
+      "_id": "inv_veg_8",
+      "category": "vegetable",
+      "name": "Spinach",
+      "stock": 25,
+      "unit": "kg",
+      "threshold": 10,
+      "price": 15
+    }
+  ],
+  "orders": [
+    {
+      "_id": "ord_1792002270602_171",
+      "orderNumber": "FS-60258",
+      "userId": "guest_patron",
+      "customerName": "Gourmet Patron",
+      "phone": "89398704949",
+      "deliveryAddress": "rajeev nagar colony,100ft ring road,vizianagaram\nAndhraPradesh,India, Mumbai - 400001",
+      "paymentMethod": "razorpay",
+      "velocity": "express",
+      "status": "Order Received",
+      "totalPrice": 431,
+      "totalAmount": 431,
+      "paymentStatus": "completed",
+      "items": [
+        {
+          "name": "Smoked Paneer",
+          "quantity": 1,
+          "price": 349,
+          "crust": "72h Neapolitan Biga",
+          "size": "Personal (8\")",
+          "additions": []
+        }
+      ],
+      "pizza": null,
+      "instructions": "Ring bell twice, leave at reception if not reachable",
+      "createdAt": "2026-10-14T18:24:30.602Z",
+      "updatedAt": "2026-10-14T18:24:30.602Z"
+    },
+    {
+      "_id": "ord_1792001876707_250",
+      "orderNumber": "FS-65107",
+      "userId": "guest_patron",
+      "customerName": "Gourmet Patron",
+      "phone": "+91 98765 43210",
+      "deliveryAddress": "Penthouse 14, Grand Corniche",
+      "paymentMethod": "Online Payment",
+      "velocity": "standard",
+      "status": "Order Received",
+      "totalPrice": 1700,
+      "totalAmount": 1700,
+      "paymentStatus": "completed",
+      "items": [
+        {
+          "name": "Vesuvio Smoke Special",
+          "quantity": 2,
+          "price": 850,
+          "crust": "72h Neapolitan Biga"
+        }
+      ],
+      "pizza": null,
+      "instructions": "",
+      "createdAt": "2026-10-14T18:17:56.707Z",
+      "updatedAt": "2026-10-14T18:17:56.707Z"
+    },
+    {
+      "_id": "ord_1792001129426_443",
+      "orderNumber": "FS-23770",
+      "userId": "guest_patron",
+      "customerName": "Gourmet Patron",
+      "phone": "9820154321",
+      "deliveryAddress": "74 Via Vesuvio, Downtown, Naples - 400001",
+      "paymentMethod": "razorpay",
+      "velocity": "express",
+      "status": "In Kitchen",
+      "totalPrice": 1378,
+      "totalAmount": 1378,
+      "paymentStatus": "completed",
+      "items": [
+        {
+          "name": "Smoked Paneer",
+          "quantity": 1,
+          "price": 529,
+          "crust": "72h Sourdough",
+          "size": "Medium (11\")",
+          "additions": [
+            "Extra Fresh Basil"
+          ]
+        },
+        {
+          "name": "Fire Margherita",
+          "quantity": 2,
+          "price": 299,
+          "crust": "72h Neapolitan Biga",
+          "size": "Personal (8\")",
+          "additions": []
+        },
+        {
+          "name": "Truffle Garlic Knots",
+          "quantity": 1,
+          "price": 169,
+          "crust": "72h Neapolitan Biga",
+          "size": "Personal (8\")",
+          "additions": []
+        }
+      ],
+      "pizza": null,
+      "instructions": "Ring bell twice, leave at reception if not reachable",
+      "createdAt": "2026-10-14T18:05:29.426Z",
+      "updatedAt": "2026-10-14T18:07:23.719Z"
+    },
+    {
+      "_id": "ord_1792000649027_308",
+      "orderNumber": "FS-79299",
+      "userId": "guest_patron",
+      "customerName": "Gourmet Patron",
+      "phone": "+91 99887 76655",
+      "deliveryAddress": "74 Via Napoli",
+      "paymentMethod": "Online Payment",
+      "velocity": "standard",
+      "status": "In 450°C Kiln Oven",
+      "totalPrice": 620,
+      "totalAmount": 620,
+      "paymentStatus": "completed",
+      "items": [
+        {
+          "name": "Smoked Truffle Pizza",
+          "quantity": 1,
+          "price": 620,
+          "crust": "72h Neapolitan Biga"
+        }
+      ],
+      "pizza": null,
+      "instructions": "",
+      "createdAt": "2026-10-14T17:57:29.027Z",
+      "updatedAt": "2026-10-14T17:57:52.534Z"
+    },
+    {
+      "_id": "ord_10248",
+      "orderNumber": "FS-10248",
+      "customerName": "Marco Valenti",
+      "phone": "+91 98201 54321",
+      "deliveryAddress": "Via Vesuvio 12, Downtown Flagship",
+      "status": "In Kitchen",
+      "totalPrice": 870,
+      "totalAmount": 870,
+      "paymentMethod": "UPI Instant",
+      "paymentStatus": "completed",
+      "createdAt": "2026-10-14T17:39:53.300Z",
+      "items": [
+        {
+          "name": "Fire Margherita",
+          "size": "Personal (8\")",
+          "quantity": 1,
+          "price": 420,
+          "crust": "72h Biga"
+        },
+        {
+          "name": "Smoked Paneer",
+          "size": "Medium (11\")",
+          "quantity": 1,
+          "price": 450,
+          "crust": "72h Biga"
+        }
+      ]
+    },
+    {
+      "_id": "ord_10249",
+      "orderNumber": "FS-10249",
+      "customerName": "Aarav Sharma",
+      "phone": "+91 98112 33445",
+      "deliveryAddress": "Flat 402, Artisan Heights",
+      "status": "In Kitchen",
+      "totalPrice": 799,
+      "totalAmount": 799,
+      "paymentMethod": "Card on Arrival",
+      "paymentStatus": "completed",
+      "createdAt": "2026-10-14T17:47:53.301Z",
+      "items": [
+        {
+          "name": "Chicken Peri-Peri",
+          "size": "Large (14\")",
+          "quantity": 1,
+          "price": 799,
+          "crust": "Cheese Burst"
+        }
+      ]
+    }
+  ],
+  "users": [],
+  "admins": [
+    {
+      "id": "admin_root_01",
+      "username": "admin",
+      "email": "admin@fireandslice.com",
+      "role": "superadmin"
+    }
+  ]
+}

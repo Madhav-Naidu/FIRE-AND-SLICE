@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fire & Slice System Architecture</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 2560px;
+    height: 1440px;
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0b0f19 50%, #05070e 100%);
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    padding: 36px 48px;
+  }
+
+  /* Grid Background Effect */
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+  }
+
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 10;
+  }
+  .title-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo-box {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
+  }
+  .main-title {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ffffff 0%, #fed7aa 50%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  .tech-pills {
+    display: flex;
+    gap: 10px;
+  }
+  .pill {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid;
+  }
+  .pill-react { background: rgba(56, 189, 248, 0.1); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); }
+  .pill-node { background: rgba(34, 197, 94, 0.1); color: #4ade80; border-color: rgba(34, 197, 94, 0.3); }
+  .pill-mongo { background: rgba(16, 185, 129, 0.1); color: #10b981; border-color: rgba(16, 185, 129, 0.3); }
+  .pill-razor { background: rgba(59, 130, 246, 0.1); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); }
+  .pill-jwt { background: rgba(168, 85, 247, 0.1); color: #c084fc; border-color: rgba(168, 85, 247, 0.3); }
+
+  /* Main Diagram Canvas */
+  .diagram-container {
+    display: grid;
+    grid-template-columns: 500px 70px 580px 70px 480px 70px 500px;
+    height: 1060px;
+    position: relative;
+    z-index: 10;
+    align-items: stretch;
+  }
+
+  /* Column Containers */
+  .arch-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+  }
+
+  .col-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid;
+  }
+
+  .col-header.fe { background: rgba(249, 115, 22, 0.12); color: #fb923c; border-color: rgba(249, 115, 22, 0.3); }
+  .col-header.gw { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3); }
+  .col-header.be { background: rgba(34, 197, 94, 0.12); color: #4ade80; border-color: rgba(34, 197, 94, 0.3); }
+  .col-header.db { background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3); }
+  .col-header.ext { background: rgba(244, 63, 94, 0.12); color: #fb7185; border-color: rgba(244, 63, 94, 0.3); }
+
+  /* Cards Styling */
+  .card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .card-glow-orange { border-top: 3px solid #f97316; }
+  .card-glow-blue { border-top: 3px solid #38bdf8; }
+  .card-glow-green { border-top: 3px solid #22c55e; }
+  .card-glow-purple { border-top: 3px solid #a855f7; }
+  .card-glow-rose { border-top: 3px solid #f43f5e; }
+  .card-glow-amber { border-top: 3px solid #f59e0b; }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f8fafc;
+  }
+  .card-title .icon-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+  }
+
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .sub-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sub-item-text {
+    font-weight: 500;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sub-item-meta {
+    font-size: 11px;
+    color: #94a3b8;
+    font-family: monospace;
+  }
+
+  /* Connector Columns */
+  .connector-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .conn-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 18px 0;
+  }
+  .conn-line {
+    width: 2px;
+    height: 48px;
+    background: linear-gradient(180deg, rgba(249, 115, 22, 0.8), rgba(56, 189, 248, 0.8));
+    position: relative;
+  }
+  .conn-badge {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  /* Footer Flow Section */
+  .flows-section {
+    position: absolute;
+    bottom: 28px;
+    left: 48px;
+    right: 48px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+  }
+  .flows-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f97316;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .flow-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+  }
+  .flow-number {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f97316;
+    color: #000;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+  }
+  .flow-number.f2 { background: #38bdf8; }
+  .flow-number.f3 { background: #22c55e; }
+  .flow-number.f4 { background: #a855f7; }
+  .flow-number.f5 { background: #fb7185; }
+  .flow-text {
+    color: #cbd5e1;
+    font-weight: 500;
+  }
+  .flow-text strong {
+    color: #fff;
+  }
+
+  /* Tag colors */
+  .tag-orange { color: #fb923c; }
+  .tag-blue { color: #38bdf8; }
+  .tag-green { color: #4ade80; }
+  .tag-purple { color: #c084fc; }
+  .tag-rose { color: #fb7185; }
+  .tag-amber { color: #fbbf24; }
+
+  /* SVG Icons inline */
+  svg.icon {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="title-group">
+    <div class="logo-box">
+      <!-- Flame / Pizza SVG -->
+      <svg class="icon" style="width: 38px; height: 38px; stroke: #fff;" viewBox="0 0 24 24">
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+      </svg>
+    </div>
+    <div>
+      <h1 class="main-title">FIRE &amp; SLICE — Full-Stack System Architecture</h1>
+      <p class="subtitle">Oasis Infobyte Internship Program (OIBSIP) | Web Development Level 3 Task | Comprehensive Architecture Map</p>
+    </div>
+  </div>
+  <div class="tech-pills">
+    <span class="pill pill-react">⚛️ React 19 + Vite</span>
+    <span class="pill pill-node">🟢 Node.js + Express</span>
+    <span class="pill pill-mongo">🍃 MongoDB Atlas</span>
+    <span class="pill pill-razor">💳 Razorpay API</span>
+    <span class="pill pill-jwt">🔐 JWT &amp; BCrypt</span>
+    <span class="pill pill-jwt">⏰ Node-Cron Service</span>
+  </div>
+</header>
+
+<!-- Main Architecture Diagram Grid -->
+<main class="diagram-container">
+
+  <!-- COLUMN 1: CLIENT TIER (FRONTEND) -->
+  <div class="arch-col">
+    <div class="col-header fe">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      1. Client Tier (React 19 + Vite)
+    </div>
+
+    <!-- Customer Application -->
+    <div class="card card-glow-orange">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-orange" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Customer Application Portal
+        </span>
+        <span class="badge">Port 5173</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>🔐</span> Auth Pages (Register / Login / PW Reset)
+          </span>
+          <span class="sub-item-meta">/login, /register</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>🍕</span> Pizza Menu &amp; Variety Showcase
+          </span>
+          <span class="sub-item-meta">/menu</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>🛠️</span> 4-Step Custom Pizza Builder
+          </span>
+          <span class="sub-item-meta">/builder</span>
+        </div>
+        <div class="sub-item" style="padding-left: 24px; font-size: 12px; color: #cbd5e1;">
+          <span>• Step 1: Base Crust (5 options: Thin, Hand Tossed, etc.)</span>
+        </div>
+        <div class="sub-item" style="padding-left: 24px; font-size: 12px; color: #cbd5e1;">
+          <span>• Step 2: Gourmet Sauces (5 options: Marinara, Peri Peri, etc.)</span>
+        </div>
+        <div class="sub-item" style="padding-left: 24px; font-size: 12px; color: #cbd5e1;">
+          <span>• Step 3: Artisanal Cheese (Mozzarella, Cheddar, Bocconcini)</span>
+        </div>
+        <div class="sub-item" style="padding-left: 24px; font-size: 12px; color: #cbd5e1;">
+          <span>• Step 4: Veggie Toppings (8 options: Olives, Jalapenos, etc.)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>💳</span> Checkout &amp; Razorpay Modal Integration
+          </span>
+          <span class="sub-item-meta">/checkout</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>📡</span> Live Order Lifecycle Tracking (Polling 30s)
+          </span>
+          <span class="sub-item-meta">/dashboard</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Portal -->
+    <div class="card card-glow-orange">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-orange" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Admin Management Portal
+        </span>
+        <span class="badge">Isolated Route</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>🔒</span> Isolated Admin Authentication
+          </span>
+          <span class="sub-item-meta">/admin/login</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>📦</span> Real-time Inventory &amp; Stock Monitor
+          </span>
+          <span class="sub-item-meta">Auto-alerts</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text">
+            <span>🚚</span> Order Fulfillment Dispatch Pipeline
+          </span>
+          <span class="sub-item-meta">Status Updates</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client State & UI Framework -->
+    <div class="card card-glow-orange" style="margin-top: auto;">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-orange" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Frontend State &amp; Runtime
+        </span>
+        <span class="badge">Vite Client</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⚡</span> Zustand Global State Store (Auth &amp; Cart)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🌐</span> Axios HTTP Client (Bearer JWT Interceptors)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🎨</span> Tailwind CSS v4 + Framer Motion Animations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECTOR 1 -->
+  <div class="connector-col">
+    <div class="conn-arrow">
+      <span class="conn-badge">HTTPS / REST</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">JSON Payload</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">JWT Bearer</span>
+    </div>
+  </div>
+
+  <!-- COLUMN 2: BACKEND API & CONTROLLER TIER -->
+  <div class="arch-col">
+    <div class="col-header be">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+      2. Express Backend &amp; Controllers
+    </div>
+
+    <!-- Gateway & Middleware -->
+    <div class="card card-glow-blue">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-blue" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Security &amp; API Middleware
+        </span>
+        <span class="badge">Port 5000</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🛡️</span> CORS Guard (Origin Whitelist &amp; Credentials)</span>
+          <span class="sub-item-meta">cors()</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🔑</span> Auth Middleware (Token Verification &amp; req.user)</span>
+          <span class="sub-item-meta">JWT Verify</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>👮</span> Admin RBAC Middleware (Role Validation)</span>
+          <span class="sub-item-meta">Admin Guard</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🩺</span> API Health Check &amp; DB Connection Status</span>
+          <span class="sub-item-meta">/api/health</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- API Route Controllers -->
+    <div class="card card-glow-green">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-green" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Express REST Controllers
+        </span>
+        <span class="badge">Route Handlers</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>👤</span> <strong>auth.controller:</strong> Register, Login, PW Reset</span>
+          <span class="sub-item-meta">/api/auth/*</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🍕</span> <strong>pizza.controller:</strong> Menu &amp; Categories Fetch</span>
+          <span class="sub-item-meta">/api/pizzas/*</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>💳</span> <strong>order.controller:</strong> Razorpay Create &amp; Verify</span>
+          <span class="sub-item-meta">/api/orders/*</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>📦</span> <strong>inventory.controller:</strong> Stock CRUD &amp; Restock</span>
+          <span class="sub-item-meta">/api/inventory/*</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⚡</span> <strong>admin.controller:</strong> Admin Auth &amp; Order Audit</span>
+          <span class="sub-item-meta">/api/admin/*</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Automated Scheduled Jobs & Business Services -->
+    <div class="card card-glow-green" style="margin-top: auto;">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-green" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Services &amp; Background Scheduler
+        </span>
+        <span class="badge">node-cron</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⏰</span> Hourly Inventory Health Check</span>
+          <span class="sub-item-meta">cron: '0 * * * *'</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>📉</span> Auto Stock Deduction Engine</span>
+          <span class="sub-item-meta">Atomic Update</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⚠️</span> Threshold Evaluation (stock &lt; threshold)</span>
+          <span class="sub-item-meta">Auto Alert</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECTOR 2 -->
+  <div class="connector-col">
+    <div class="conn-arrow">
+      <span class="conn-badge">Mongoose ODM</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">BSON Query</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">TCP :27017</span>
+    </div>
+  </div>
+
+  <!-- COLUMN 3: DATA PERSISTENCE TIER -->
+  <div class="arch-col">
+    <div class="col-header db">
+      <svg class="icon" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+      3. Data Persistence (MongoDB)
+    </div>
+
+    <!-- Database Schema Specs -->
+    <div class="card card-glow-purple">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-purple" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Mongoose Document Collections
+        </span>
+        <span class="badge">fireandslice DB</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <div>
+            <div class="sub-item-text"><span>👥</span> <strong>Users Collection</strong></div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px;">_id, name, email, password (bcrypt), isVerified, verificationToken, resetPasswordToken</div>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div>
+            <div class="sub-item-text"><span>🛍️</span> <strong>Orders Collection</strong></div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px;">_id, userId (Ref), orderNumber, pizza { base, sauce, cheese, vegetables[] }, totalPrice, status, paymentId</div>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div>
+            <div class="sub-item-text"><span>📦</span> <strong>Inventory Collection</strong></div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px;">_id, category (base|sauce|cheese|veg), name, stock, unit, threshold (def: 20), price, lastRestocked</div>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div>
+            <div class="sub-item-text"><span>👑</span> <strong>Admins Collection</strong></div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px;">_id, username, email, password (bcrypt), role ('admin' | 'superadmin')</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Database Operational Features -->
+    <div class="card card-glow-purple" style="margin-top: auto;">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-purple" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Data Integrity &amp; Features
+        </span>
+        <span class="badge">ACID / Indexes</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⚡</span> Unique Compound Indexes (email, orderNumber)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🔒</span> Pre-save Password Hashing Hooks (Salt rounds 12)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🌱</span> Database Auto-Seeder (`seed.js` for bases &amp; items)</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🛡️</span> Atomic Stock Deductions via Mongoose `$inc: -1`</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECTOR 3 -->
+  <div class="connector-col">
+    <div class="conn-arrow">
+      <span class="conn-badge">External API</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">HMAC SHA256</span>
+      <div class="conn-line"></div>
+      <span class="conn-badge">SMTP SSL/TLS</span>
+    </div>
+  </div>
+
+  <!-- COLUMN 4: EXTERNAL CLOUD SERVICES TIER -->
+  <div class="arch-col">
+    <div class="col-header ext">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+      4. External Integrations Tier
+    </div>
+
+    <!-- Razorpay Payment Gateway -->
+    <div class="card card-glow-blue">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-blue" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          Razorpay Payment Gateway
+        </span>
+        <span class="badge">FinTech API</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>💵</span> Server: Create Order API (`orders.create`)</span>
+          <span class="sub-item-meta">INR / Paise</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>💳</span> Client: Razorpay Standard Checkout Popup</span>
+          <span class="sub-item-meta">SDK Modal</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🔐</span> Cryptographic Signature Verification</span>
+          <span class="sub-item-meta">HMAC-SHA256</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🛡️</span> Fraud Prevention &amp; Tamper Detection</span>
+          <span class="sub-item-meta">Secret Key</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nodemailer SMTP Mail Service -->
+    <div class="card card-glow-rose">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-rose" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Nodemailer SMTP Service
+        </span>
+        <span class="badge">Email Service</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>✉️</span> Account Verification Email with Token Link</span>
+          <span class="sub-item-meta">HTML Template</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🔑</span> Forgot Password Recovery Link</span>
+          <span class="sub-item-meta">Expiring Token</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>⚠️</span> Low Stock Real-Time Alert to Admin Email</span>
+          <span class="sub-item-meta">Threshold Breached</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🔒</span> TLS Secure Mail Transport (Gmail SMTP)</span>
+          <span class="sub-item-meta">Port 587/465</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deployment Targets -->
+    <div class="card card-glow-amber" style="margin-top: auto;">
+      <div class="card-title">
+        <span class="icon-tag">
+          <svg class="icon tag-amber" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          Target Infrastructure
+        </span>
+        <span class="badge">Production Ready</span>
+      </div>
+      <div class="item-list">
+        <div class="sub-item">
+          <span class="sub-item-text"><span>☁️</span> Frontend: Vercel / Netlify CDN</span>
+          <span class="sub-item-meta">SPA Dist</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🐳</span> Backend: Render / Railway / Heroku Container</span>
+          <span class="sub-item-meta">Node Runtime</span>
+        </div>
+        <div class="sub-item">
+          <span class="sub-item-text"><span>🌐</span> Database: MongoDB Atlas Global Cloud Cluster</span>
+          <span class="sub-item-meta">M0 Replica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Bottom Key Execution Flows Bar -->
+<footer class="flows-section">
+  <div class="flows-title">
+    <svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+    Core Workflows
+  </div>
+
+  <div class="flow-item">
+    <div class="flow-number">1</div>
+    <div class="flow-text"><strong>Auth &amp; Verification:</strong> User registers &rarr; SMTP verification email &rarr; Token validated &rarr; JWT session.</div>
+  </div>
+
+  <div class="flow-item">
+    <div class="flow-number f2">2</div>
+    <div class="flow-text"><strong>Custom Pizza Builder:</strong> Client configures 4 stages &rarr; Real-time price compute &rarr; Checkout summary.</div>
+  </div>
+
+  <div class="flow-item">
+    <div class="flow-number f3">3</div>
+    <div class="flow-text"><strong>Razorpay Payment:</strong> Server creates order &rarr; Modal checkout &rarr; HMAC SHA256 verified &rarr; Order placed.</div>
+  </div>
+
+  <div class="flow-item">
+    <div class="flow-number f4">4</div>
+    <div class="flow-text"><strong>Auto Stock Decrement:</strong> Pizza ingredients atomically decremented in MongoDB upon payment verification.</div>
+  </div>
+
+  <div class="flow-item">
+    <div class="flow-number f5">5</div>
+    <div class="flow-text"><strong>Admin &amp; Cron Alerts:</strong> Admin manages orders &amp; inventory &rarr; Hourly Cron triggers email if stock &lt; threshold.</div>
+  </div>
+</footer>
+
+</body>
+</html>
