@@ -25,14 +25,14 @@ Every task folder contains:
 
 ## Track
 
-- **Track:** (your assigned track — update this line)
-- **Intern:** Kengu (update with your full name)
+- **Track:** Web Development and Designing
+- **Intern:** Kenguva Madhav Naidu
 
 ## Task Index
 
 | # | Folder | Task | Status |
 |---|--------|------|--------|
-| 1 | _pending_ | _pending_ | ⬜ Not started |
+| 1 | `OIBSIP/WebDev-L3-FireAndSlice/` | WebDev Level 3 — FIRE & SLICE Craft Pizza Platform |  Completed |
 
 ## Notes
 
