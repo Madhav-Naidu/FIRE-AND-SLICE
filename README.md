@@ -1,5 +1,8 @@
 # OIBSIP — Oasis Infobyte Internship
 
+> **Live Website:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/](https://madhav-naidu.github.io/FIRE-AND-SLICE/)  
+> **Interactive Architecture Diagram:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html](https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html)
+
 This repository contains all task submissions for the Oasis Infobyte Internship Program (OIBSIP).
 
 ## Repository Structure
