@@ -2,6 +2,16 @@
 
 A production-grade, full-stack pizza ordering and inventory management platform with separate Admin and User roles, real-time order tracking, Razorpay payment integration, and automated stock notifications.
 
+> **Live Deployment:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/](https://madhav-naidu.github.io/FIRE-AND-SLICE/)  
+> **Interactive Architecture Diagram:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html](https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html)
+
+### Live Demo & Reviewer Credentials
+
+| Role | Route | Credentials | Quick Fill |
+|------|-------|-------------|------------|
+| **Patron Customer** | `/#/login` | `demo@fireandslice.com` / `password123` | Click **"Fill Demo"** button on sign-in card |
+| **Admin Operations** | `/#/admin/login` | `admin` / `admin123` | Click **"Fill Demo"** button on admin card |
+
 ## Features
 
 ### User Side

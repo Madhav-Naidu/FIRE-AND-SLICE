@@ -1,7 +1,15 @@
 # OIBSIP — Oasis Infobyte Internship
 
 > **Live Website:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/](https://madhav-naidu.github.io/FIRE-AND-SLICE/)  
-> **Interactive Architecture Diagram:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html](https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html)
+> **Interactive Architecture Diagram:** [https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html](https://madhav-naidu.github.io/FIRE-AND-SLICE/architecture-diagram.html)  
+> **User Portfolio Site:** [https://madhav-naidu.github.io/](https://madhav-naidu.github.io/)
+
+### Quick Access & Live Demo Credentials
+
+| Role | Access Route | Credentials | Quick Action |
+|------|--------------|-------------|--------------|
+| **Patron / Customer** | [/#/login](https://madhav-naidu.github.io/FIRE-AND-SLICE/#/login) | `demo@fireandslice.com` / `password123` | Click **"Fill Demo"** button on card |
+| **Admin Operations (KDS)** | [/#/admin/login](https://madhav-naidu.github.io/FIRE-AND-SLICE/#/admin/login) | `admin` / `admin123` | Click **"Fill Demo"** button on card |
 
 This repository contains all task submissions for the Oasis Infobyte Internship Program (OIBSIP).
 
