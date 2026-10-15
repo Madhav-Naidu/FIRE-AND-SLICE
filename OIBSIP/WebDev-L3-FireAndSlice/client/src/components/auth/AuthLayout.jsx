@@ -5,6 +5,7 @@ import Input from '../ui/Input';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { validateEmail, validatePassword } from '../../utils/helpers';
+import { authApi } from '../../services/api';
 
 export function AuthLayout({ children, title, subtitle, footer }) {
   return (
@@ -64,23 +65,17 @@ export function LoginForm({ onSwitchToRegister, onSwitchToForgot }) {
 
     setLoading(true);
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: formData.email, password: formData.password }),
-      });
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Login failed');
-      }
+      const data = await authApi.login({ email: formData.email, password: formData.password });
 
       await login(data.token, data.user);
       toast.success(`Welcome back, ${data.user?.name || 'Chef'}!`);
       navigate('/menu');
     } catch (error) {
-      setSubmitError(error.message || 'Sign in failed. Please check credentials.');
-      toast.error(error.message || 'Login failed');
+      const cleanMsg = error.message?.includes('Unexpected token') || error.message?.includes('JSON')
+        ? 'Sign in failed. Please check credentials.'
+        : (error.message || 'Sign in failed. Please check credentials.');
+      setSubmitError(cleanMsg);
+      toast.error(cleanMsg);
     } finally {
       setLoading(false);
     }
@@ -226,32 +221,26 @@ export function RegisterForm({ onSwitchToLogin }) {
 
     setLoading(true);
     try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          password: formData.password,
-        }),
+      const data = await authApi.register({
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
       });
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Registration failed');
-      }
 
       if (data.token) {
         await login(data.token, data.user);
         toast.success(`Welcome to FIRE & SLICE, ${data.user?.name || 'Chef'}!`);
         navigate('/menu');
       } else {
-        toast.success('Registration successful! Please check your email to verify your account.');
+        toast.success('Registration successful! Please sign in.');
         onSwitchToLogin();
       }
     } catch (error) {
-      setSubmitError(error.message || 'Registration failed');
-      toast.error(error.message || 'Registration failed');
+      const cleanMsg = error.message?.includes('Unexpected token') || error.message?.includes('JSON')
+        ? 'Registration failed. Please try again.'
+        : (error.message || 'Registration failed');
+      setSubmitError(cleanMsg);
+      toast.error(cleanMsg);
     } finally {
       setLoading(false);
     }
@@ -360,20 +349,15 @@ export function ForgotPasswordForm({ onBackToLogin }) {
 
     setLoading(true);
     try {
-      const response = await fetch('/api/auth/forgot-password', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      const data = await response.json();
-
-      if (!response.ok) throw new Error(data.message || 'Failed to send reset link');
-
+      await authApi.forgotPassword(email);
       setSent(true);
       toast.success('Password reset link generated!');
     } catch (err) {
-      setError(err.message || 'Could not send reset link');
-      toast.error(err.message || 'Could not send reset link');
+      const cleanMsg = err.message?.includes('Unexpected token') || err.message?.includes('JSON')
+        ? 'Could not send reset link'
+        : (err.message || 'Could not send reset link');
+      setError(cleanMsg);
+      toast.error(cleanMsg);
     } finally {
       setLoading(false);
     }
@@ -444,19 +428,14 @@ export function ResetPasswordForm({ token, onBackToLogin }) {
 
     setLoading(true);
     try {
-      const response = await fetch('/api/auth/reset-password', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token, password: formData.password }),
-      });
-      const data = await response.json();
-
-      if (!response.ok) throw new Error(data.message || 'Failed to reset password');
-
+      await authApi.resetPassword({ token, password: formData.password });
       setSuccess(true);
       toast.success('Password updated successfully!');
     } catch (err) {
-      toast.error(err.message || 'Password reset failed');
+      const cleanMsg = err.message?.includes('Unexpected token') || err.message?.includes('JSON')
+        ? 'Password reset failed'
+        : (err.message || 'Password reset failed');
+      toast.error(cleanMsg);
     } finally {
       setLoading(false);
     }

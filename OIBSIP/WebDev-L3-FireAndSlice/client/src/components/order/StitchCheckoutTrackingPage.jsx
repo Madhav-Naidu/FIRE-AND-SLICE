@@ -44,17 +44,23 @@ export function StitchCheckoutTrackingPage({ initialMode = 'checkout' }) {
     if (!confirmedOrder?._id) return;
 
     let eventSource = null;
-    try {
-      eventSource = new EventSource(`/api/orders/${confirmedOrder._id}/live`);
-      eventSource.onmessage = (event) => {
-        try {
-          const update = JSON.parse(event.data);
-          if (update && update.status) {
-            setOrderStatus(update.status);
-          }
-        } catch (e) {}
-      };
-    } catch (e) {}
+    const isStatic = typeof window !== 'undefined' && (window.location.hostname.includes('github.io') || window.location.protocol === 'file:');
+    if (!isStatic) {
+      try {
+        eventSource = new EventSource(`/api/orders/${confirmedOrder._id}/live`);
+        eventSource.onerror = () => {
+          try { eventSource.close(); } catch (e) {}
+        };
+        eventSource.onmessage = (event) => {
+          try {
+            const update = JSON.parse(event.data);
+            if (update && update.status) {
+              setOrderStatus(update.status);
+            }
+          } catch (e) {}
+        };
+      } catch (e) {}
+    }
 
     const interval = setInterval(async () => {
       try {

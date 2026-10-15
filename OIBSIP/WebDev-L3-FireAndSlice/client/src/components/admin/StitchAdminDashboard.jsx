@@ -14,29 +14,35 @@ export function StitchAdminDashboard() {
   useEffect(() => {
     fetchData();
 
-    // Real-time live kitchen stream
+    // Real-time live kitchen stream (guarded for static host / offline)
     let eventSource = null;
-    try {
-      eventSource = new EventSource('/api/orders/live-stream');
-      eventSource.onmessage = (event) => {
-        try {
-          const payload = JSON.parse(event.data);
-          if (payload.type === 'NEW_ORDER' && payload.order) {
-            setOrders((prev) => [payload.order, ...prev.filter((o) => o._id !== payload.order._id)]);
-            setStatusMsg(`🔔 Live Order Received: #${payload.order.orderNumber}`);
-            setTimeout(() => setStatusMsg(null), 4000);
-          } else if (payload.type === 'STATUS_UPDATE') {
-            setOrders((prev) =>
-              prev.map((o) => (o._id === payload.orderId ? { ...o, status: payload.status } : o))
-            );
-          } else if (payload.type === 'INVENTORY_UPDATE') {
-            setInventory((prev) =>
-              prev.map((i) => (i._id === payload.itemId ? { ...i, stock: payload.stock } : i))
-            );
-          }
-        } catch (e) {}
-      };
-    } catch (e) {}
+    const isStatic = typeof window !== 'undefined' && (window.location.hostname.includes('github.io') || window.location.protocol === 'file:');
+    if (!isStatic) {
+      try {
+        eventSource = new EventSource('/api/orders/live-stream');
+        eventSource.onerror = () => {
+          try { eventSource.close(); } catch (e) {}
+        };
+        eventSource.onmessage = (event) => {
+          try {
+            const payload = JSON.parse(event.data);
+            if (payload.type === 'NEW_ORDER' && payload.order) {
+              setOrders((prev) => [payload.order, ...prev.filter((o) => o._id !== payload.order._id)]);
+              setStatusMsg(`🔔 Live Order Received: #${payload.order.orderNumber}`);
+              setTimeout(() => setStatusMsg(null), 4000);
+            } else if (payload.type === 'STATUS_UPDATE') {
+              setOrders((prev) =>
+                prev.map((o) => (o._id === payload.orderId ? { ...o, status: payload.status } : o))
+              );
+            } else if (payload.type === 'INVENTORY_UPDATE') {
+              setInventory((prev) =>
+                prev.map((i) => (i._id === payload.itemId ? { ...i, stock: payload.stock } : i))
+              );
+            }
+          } catch (e) {}
+        };
+      } catch (e) {}
+    }
 
     return () => {
       if (eventSource) eventSource.close();

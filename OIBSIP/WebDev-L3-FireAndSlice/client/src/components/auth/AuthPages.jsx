@@ -9,6 +9,7 @@ import {
 } from './AuthLayout';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
+import { authApi } from '../../services/api';
 import Spinner from '../ui/Spinner';
 
 export function RegisterPage() {
@@ -171,10 +172,7 @@ function VerifyEmailContent({ token }) {
     let mounted = true;
     const verify = async () => {
       try {
-        const response = await fetch(`/api/auth/verify-email?token=${token}`);
-        const data = await response.json();
-
-        if (!response.ok) throw new Error(data.message || 'Verification failed');
+        await authApi.verifyEmail(token);
 
         if (mounted) {
           setStatus('success');
@@ -183,7 +181,10 @@ function VerifyEmailContent({ token }) {
       } catch (error) {
         if (mounted) {
           setStatus('error');
-          toast.error(error.message);
+          const cleanMsg = error.message?.includes('Unexpected token') || error.message?.includes('JSON')
+            ? 'Verification service unavailable. Please try again.'
+            : (error.message || 'Verification failed');
+          toast.error(cleanMsg);
         }
       }
     };

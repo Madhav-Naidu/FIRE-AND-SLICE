@@ -32,23 +32,24 @@ export function AdminLoginPage() {
 
     setLoading(true);
     try {
-      const response = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: formData.username, password: formData.password }),
-      });
-      const data = await response.json();
-      
-      if (!response.ok) throw new Error(data.message || 'Login failed');
+      const data = await adminApi.login({ username: formData.username, password: formData.password });
       
       localStorage.setItem('adminToken', data.token);
       toast.success('Welcome back, Admin!');
       navigate('/admin');
     } catch (error) {
-      toast.error(error.message);
+      const cleanMsg = error.message?.includes('Unexpected token') || error.message?.includes('JSON')
+        ? 'Admin sign in failed. Please verify credentials.'
+        : (error.message || 'Login failed');
+      toast.error(cleanMsg);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleQuickDemoAdmin = () => {
+    setFormData({ username: 'admin', password: 'admin123' });
+    setErrors({});
   };
 
   return (
@@ -99,12 +100,17 @@ export function AdminLoginPage() {
                 Sign In to Admin
               </Button>
             </form>
-            <div className="mt-6 p-4 bg-surface-elevated rounded-xl">
-              <p className="text-sm text-on-surface-variant text-center">
-                <strong>Demo Credentials:</strong><br />
-                Username: <code className="bg-surface-container px-1 rounded">admin</code><br />
-                Password: <code className="bg-surface-container px-1 rounded">admin123</code>
+            <div className="mt-6 p-4 bg-surface-elevated rounded-xl flex items-center justify-between">
+              <p className="text-xs text-on-surface-variant">
+                <strong className="text-crust-cream">Demo Admin:</strong> <code className="bg-surface-container px-1 rounded">admin</code> / <code className="bg-surface-container px-1 rounded">admin123</code>
               </p>
+              <button
+                type="button"
+                onClick={handleQuickDemoAdmin}
+                className="text-xs font-mono font-semibold text-primary-container hover:text-ember-glow px-2.5 py-1 rounded bg-primary-container/15 border border-primary-container/30 cursor-pointer"
+              >
+                Fill Demo
+              </button>
             </div>
             <p className="mt-6 text-center text-sm text-on-surface-variant">
               <a href="/" className="text-ember-glow hover:text-primary-700 font-medium">
